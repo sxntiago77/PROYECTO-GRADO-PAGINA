@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Rutas de Evacuación | TEINCO SEGURO</title>
+</head>
+<body>
+
+<!------------------------------------------------>
+    <div class="barra-superior">
+        <span>CORPORACION TECNOLOGICA INDUSTRIAL COLOMBIANA</span>
+    </div>
+    <header class="barra-navegacion">
+        <div class="logotipo">
+            <img src="IMAGENES/teinco.png" alt="Logo TEINCO">
+            <div>
+                <strong>TEINCO SEGURO</strong>
+                <small>PLATAFORMA DE PREVENCION SISMICA</small>
+            </div>
+        </div>
+
+        <!------------------------------------------------>
+        <nav>
+            <ul>
+                <li><a href="index.html#inicio">INICIO</a></li>
+                <li><a href="protocolos.html">PROTOCOLOS</a></li>
+                <li><a href="rutas.html" class="activa">RUTAS DE EVACUACION</a></li>
+                <li><a href="autoproteccion.html">AUTOPROTECCION</a></li>
+                <li><a href="capacitacion.html">CAPACITACION</a></li>
+                <li><a href="politicas.html">MARCO LEGAL Y PROYECTO</a></li>
+                <li><a href="index.html#contactos">CONTACTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!------------------------------------------------>
+    <section class="seccion-sismo">
+        <header class="encabezado-seccion">
+            <div class="etiqueta-alerta">
+                <i data-lucide="map-pin"></i>
+                <span>ESQUEMA DE EVACUACIÓN Y PLANOS DE PLANTA</span>
+            </div>
+            <h1 class="titulo-principal">Planos de Evacuación por Piso y Bloque</h1>
+            <p class="subtitulo">
+                Consulta la ubicación exacta de salidas de emergencia, extintores, camillas, gabinetes y rutas hacia la vía pública.
+            </p>
+        </header>
+
+        <!------------------------------------------------>
+        <!-- Visualizacion de planos -->
+        <div class="contenedor-visor-plano">
+            <!-- Panel de control (selectores de sede y piso) -->
+            <div class="controles-plano">
+                <div class="grupo-control">
+                    <label><i data-lucide="building"></i> SEDE:</label>
+                    <div class="piso-botones">
+                        <button class="btn-piso activo">Sede 7 de Agosto</button>
+                    </div>
+                </div>
+
+                <div class="grupo-control">
+                    <label><i data-lucide="layers"></i> BLOQUE / PISO:</label>
+                    <div class="piso-botones">
+                        <button class="btn-piso">P1 - Bloque A</button>
+                        <button class="btn-piso activo">P1 - Bloque B</button>
+                        <button class="btn-piso">P2 - General</button>
+                        <button class="btn-piso">P3 - General</button>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------------------------------------>
+            <!-- Visor del plano e informacion -->
+            <div class="tarjeta-plano-visor">
+                <!-- Encabezado de la tarjeta -->
+                <div class="encabezado-plano">
+                    <div>
+                        <span class="badge badge-azul">Plano Oficial SG-SST</span>
+                        <h2 class="titulo-plano-actual">PRIMER PISO – BLOQUE B (Sede Siete de Agosto)</h2>
+                    </div>
+                    <button onclick="abrirPlanoHD()" class="boton-accion" type="button">
+                        <i data-lucide="maximize-2"></i> Ver Plano en HD
+                    </button>
+                </div>
+
+                <!------------------------------------------------>
+                <!-- Contenido del plano -->
+                <div class="grid-plano-contenido">
+                    <div class="caja-imagen-plano">
+                        <img src="IMAGENES/primer piso bloque b 7 agosto.jpeg" alt="Plano Primer Piso Bloque B Sede Siete de Agosto TEINCO" id="imagen-plano-actual">
+                    </div>
+                    <div class="detalles-plano-lateral">
+                        <h3 class="titulo-leyenda"><i data-lucide="info"></i> Puntos Clave de este Nivel:</h3>
+                        <ul class="lista-detalles-plano">
+                            <li><strong>Acceso / Salida:</strong> Salida directa por Carrera 22 y evacuación bordeando Calle 63.</li>
+                            <li><strong>Áreas Cubiertas:</strong> Almacén, Sistemas de Información, Didácticos y Parqueadero.</li>
+                            <li><strong>Equipos de Emergencia:</strong> Extintores distribuidos en pasillos, Botiquín y Camilla en la zona central.</li>
+                            <li><strong>Servicios:</strong> Baño Discapacitados, Baño Mujeres, Baño Hombres y Cuarto de Aseo.</li>
+                        </ul>
+
+                        <!------------------------------------------------>
+                        <!-- Cuadro de alerta -->
+                        <div class="alerta-plano-box">
+                            <i data-lucide="alert-circle"></i>
+                            <p>En caso de emergencia en este nivel, siga las flechas verdes demarcadas en el suelo hacia el parqueadero / salida Carrera 22.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!------------------------------------------------>
+        <!-- Contenedor de tarjetas -->
+        <div class="contenedor-tarjetas" style="margin-top: 50px;">
+            <!-- Tarjeta 1-->
+            <article class="tarjeta tarjeta-azul">
+                <div class="fondo-esquina"></div>
+                <div class="insignia-icono"><i data-lucide="building"></i></div>
+                <div class="contenido-tarjeta">
+                    <span class="numero-paso">SEDE</span>
+                    <h2 class="titulo-paso">SEDE TEUSAQUILLO (PRINCIPAL)</h2>
+                    <p class="descripcion-paso">
+                        Evacuación directa por salidas sobre la Calle 42. El punto de reunión final de la comunidad universitaria es el <strong>Parque Sucre</strong> / Plazoleta Bloque Central.
+                    </p>
+                    <div class="pie-tarjeta">
+                        <i data-lucide="map-pin"></i>
+                        <span>Ubicación: Calle 42 No. 13 - 19.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!------------------------------------------------>
+            <!-- Tarjeta 2-->
+            <article class="tarjeta tarjeta-naranja">
+                <div class="fondo-esquina"></div>
+                <div class="insignia-icono"><i data-lucide="door-open"></i></div>
+                <div class="contenido-tarjeta">
+                    <span class="numero-paso">INT</span>
+                    <h2 class="titulo-paso">SEDE 7 DE AGOSTO - INTERNO</h2>
+                    <p class="descripcion-paso">
+                        Para eventos leves o repliegue preliminar en auditorios, áreas comunes o salones, el punto interno de reunión es la zona central del primer nivel.
+                    </p>
+                    <div class="pie-tarjeta">
+                        <i data-lucide="info"></i>
+                        <span>Aplica cuando se requiere evacuación preventiva.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!------------------------------------------------>
+            <!-- Tarjeta 3-->
+            <article class="tarjeta tarjeta-verde">
+                <div class="fondo-esquina"></div>
+                <div class="insignia-icono"><i data-lucide="flag"></i></div>
+                <div class="contenido-tarjeta">
+                    <span class="numero-paso">EXT</span>
+                    <h2 class="titulo-paso">SEDE 7 DE AGOSTO - FINAL</h2>
+                    <p class="descripcion-paso">
+                        Al salir por la Carrera 22 o Carrera 24, la evacuación final de todo el personal se dirige a la <strong>Isla Carrera 24 con Transversal 22 y Calle 61F</strong>.
+                    </p>
+                    <div class="pie-tarjeta">
+                        <i data-lucide="check-circle"></i>
+                        <span>Zona delimitada en plano oficial SG-SST.</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!------------------------------------------------>
+        <!-- Modal para ver el plano en HD -->
+        <div id="modelo-plano" class="modal-visor" onclick="cerrarPlanoHD()">
+            <span class="cerrar-modal">&times;</span>
+            <img class="contenido-modal" id="imagen-modal-hd" src="" alt="Plano HD">
+        </div>
+    </section>
+
+    <!--FOOTER -->
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <div class="grilla-pie">
+
+                <!------------------------------------------------>
+                <div class="columna-pie">
+                    <div class="logotipo-pie">
+                        <div class="icono-logo-pie"><img src="IMAGENES/teinco.png" alt="Logo TEINCO"></div>
+                        <div>
+                            <span class="titulo-logo">TEINCO SEGURO</span>
+                            <span class="subtitulo-logo">CAMPUS CARDIOPROTEGIDO Y SEGURO</span>
+                        </div>
+                    </div>
+                    <p class="descripcion-pie">Preparación, prevención y respuesta técnica ante emergencias.</p>
+                </div>
+
+                <!------------------------------------------------>
+                <div class="columna-pie">
+                    <h4 class="titulo-columna-pie">Navegación</h4>
+                    <ul class="lista-pie">
+                        <li><a href="index.html#inicio"><i data-lucide="arrow-right"></i> Inicio</a></li>
+                        <li><a href="protocolos.html"><i data-lucide="arrow-right"></i> Protocolos</a></li>
+                        <li><a href="rutas.html"><i data-lucide="arrow-right"></i> Rutas</a></li>
+                        <li><a href="autoproteccion.html"><i data-lucide="arrow-right"></i> Autoprotección</a></li>
+                        <li><a href="capacitacion.html"><i data-lucide="arrow-right"></i> Capacitación</a></li>
+                        <li><a href="politicas.html"><i data-lucide="arrow-right"></i> Políticas SG-SST</a></li>
+                    </ul>
+                </div>
+
+                <!------------------------------------------------>
+                <div class="columna-pie">
+                    <h4 class="titulo-columna-pie">Contacto SST</h4>
+                    <ul class="lista-contacto-pie">
+                        <li><i data-lucide="map-pin"></i><span>Calle 42 No. 13 - 19, Teusaquillo / Bogotá D.C.</span></li>
+                        <li><i data-lucide="mail"></i><span>seguridad.trabajo@teinco.edu.co</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!------------------------------------------------>
+            <div class="barra-derechos">
+    <div class="texto-derechos">
+        <p>© 2025 Corporación Tecnológica Industrial Colombiana (TEINCO). Todos los derechos reservados.</p>
+        <p class="creditos-desarrolladores">
+            <i data-lucide="code"></i> Desarrollado por <strong>Santiago Poveda</strong>, <strong>Juan Chunza</strong> y <strong>Thomas González</strong>
+        </p>
+    </div>
+    </footer>
+
+<!---------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------->
+
+    <!--NO TOCAR (ABRIR Y CERRAR PLANOS SIN ABRIR OTRA PESTANA) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!------------------------------------------------>
+    <script>
+        lucide.createIcons();
+
+        // Control de los botones de pisos/bloques
+        document.querySelectorAll('.btn-piso').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                this.parentElement.querySelectorAll('.btn-piso').forEach(function (b) {
+                    b.classList.remove('activo');
+                });
+                this.classList.add('activo');
+            });
+        });
+
+        // Esto es para poder abrir las imagenes sin tener que abrir otra pestana
+        function abrirPlanoHD() {
+            var rutaImagen = document.getElementById('imagen-plano-actual').src;
+            document.getElementById('imagen-modal-hd').src = rutaImagen;
+            document.getElementById('modelo-plano').style.display = 'block';
+        }
+
+        // Con esto se cierra la ventana o plano de la imagen al dar click
+        function cerrarPlanoHD() {
+            document.getElementById('modelo-plano').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

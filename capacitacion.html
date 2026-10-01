@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Capacitación y Quiz | TEINCO SEGURO</title>
+</head>
+<body>
+
+    <!------------------------------------------------>
+    <div class="barra-superior">
+        <span>CORPORACION TECNOLOGICA INDUSTRIAL COLOMBIANA</span>
+    </div>
+
+    <header class="barra-navegacion">
+
+        <div class="logotipo">
+            <img src="IMAGENES/teinco.png" alt="Logo TEINCO">
+            <div>
+                <strong>TEINCO SEGURO</strong>
+                <small>PLATAFORMA DE PREVENCION SISMICA</small>
+            </div>
+        </div>
+
+        <!------------------------------------------------>
+        <nav>
+            <ul>
+                <li><a href="index.html#inicio">INICIO</a></li>
+                <li><a href="protocolos.html">PROTOCOLOS</a></li>
+                <li><a href="rutas.html">RUTAS DE EVACUACION</a></li>
+                <li><a href="autoproteccion.html">AUTOPROTECCION</a></li>
+                <li><a href="capacitacion.html" class="activa">CAPACITACION</a></li>
+                <li><a href="politicas.html">MARCO LEGAL Y PROYECTO</a></li>
+                <li><a href="index.html#contactos">CONTACTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!------------------------------------------------>
+    <section class="seccion-sismo">
+
+        <header class="encabezado-seccion">
+            <div class="etiqueta-alerta">
+                <i data-lucide="graduation-cap"></i>
+                <span>FORMACIÓN INSTITUCIONAL Y EVALUACIÓN</span>
+            </div>
+            <h1 class="titulo-principal">Capacitación y Evaluación de Conocimientos</h1>
+            <p class="subtitulo">
+                Conoce al equipo de brigadistas de TEINCO y pon a prueba tus conocimientos sobre cómo actuar en caso de un sismo.
+            </p>
+        </header>
+
+        <!------------------------------------------------>
+        <!-- Contenedor de tarjetas -->
+        <div class="contenedor-tarjetas">
+
+            <!-- Tarjeta 1-->
+            <article class="tarjeta tarjeta-azul">
+                <div class="fondo-esquina"></div>
+                <div class="insignia-icono"><i data-lucide="users"></i></div>
+                <div class="contenido-tarjeta">
+                    <span class="numero-paso">BRIG</span>
+                    <h2 class="titulo-paso">BRIGADISTAS OFICIALES TEINCO</h2>
+                    <p class="descripcion-paso">
+                        Personal capacitado para liderazgo de evacuación y primeros auxilios:
+                        <br>• <strong>Jair Mora Figueredo</strong> (1.)
+                        <br>• <strong>Jeisson Aparicio</strong> (2.)
+                        <br>• <strong>Never Varilla</strong> (1.)
+                        <br>• <strong>Luis Alfonso Moreno Guzman</strong> (2.)
+                    </p>
+                    <div class="pie-tarjeta">
+                        <i data-lucide="shield"></i>
+                        <span>Equipo de primera respuesta institucional.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!------------------------------------------------>
+            <!-- Tarjeta 2-->
+            <article class="tarjeta tarjeta-naranja">
+                <div class="fondo-esquina"></div>
+                <div class="insignia-icono"><i data-lucide="calendar"></i></div>
+                <div class="contenido-tarjeta">
+                    <span class="numero-paso">SIM</span>
+                    <h2 class="titulo-paso">SIMULACROS INSTITUCIONALES</h2>
+                    <p class="descripcion-paso">
+                        Participación activa en el Simulacro Distrital de Bogotá y simulacros internos para medir tiempos de evacuación y conteo en puntos de reunión.
+                    </p>
+                    <div class="pie-tarjeta">
+                        <i data-lucide="info"></i>
+                        <span>Ejercicios periódicos en todas las sedes.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!------------------------------------------------>
+            <!-- Tarjeta 3-->
+            <article class="tarjeta tarjeta-verde">
+                <div class="fondo-esquina"></div>
+                <div class="insignia-icono"><i data-lucide="book-open"></i></div>
+                <div class="contenido-tarjeta">
+                    <span class="numero-paso">CURSO</span>
+                    <h2 class="titulo-paso">CÁPSULAS DE FORMACIÓN SG-SST</h2>
+                    <p class="descripcion-paso">
+                        Módulos breves sobre uso de extintores, atención de hemorragias, control de pánico y maniobras de resguardo en aulas y laboratorios.
+                    </p>
+                    <div class="pie-tarjeta">
+                        <i data-lucide="check-circle"></i>
+                        <span>Disponibles en el Campus Virtual TEINCO.</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!------------------------------------------------>
+        <!-- Modulo interactivo del quiz -->
+        <div class="contenedor-visor-plano" style="margin-top: 50px;">
+            <div class="tarjeta-plano-visor">
+                <div class="encabezado-plano">
+                    <div>
+                        <span class="badge badge-azul">Evaluación Rápida</span>
+                        <h2 class="titulo-plano-actual">Quiz de Prevención Sísmica TEINCO</h2>
+                    </div>
+
+                    <span class="badge badge-naranja" id="contador-quiz">Pregunta 1 de 10</span>
+                </div>
+                <div id="caja-quiz" class="detalles-plano-lateral">
+                    <h3 class="titulo-leyenda" id="pregunta-texto">Cargando pregunta...</h3>
+                    <div class="opciones-container" id="opciones-container" style="display: flex; flex-direction: column; gap: 12px; margin: 15px 0;">
+                    </div>
+                    <div id="mensaje-retroalimentacion" class="alerta-plano-box" style="display: none; margin-top: 15px;">
+                        <i data-lucide="info" id="icono-retro"></i>
+                        <p id="texto-retro"></p>
+                    </div>
+                    <div style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                        <button id="btn-siguiente" class="boton-accion" style="display: none;">
+                            Siguiente Pregunta <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!------------------------------------------------>
+                <!-- Pantalla final de resultados -->
+                <div id="pantalla-resultado" style="display: none; text-align: center; padding: 30px 10px;">
+                    <i data-lucide="award" style="width: 50px; height: 50px; color: #2563eb; margin-bottom: 15px;"></i>
+                    <h2 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 10px;">¡Evaluación Completada!</h2>
+                    <p id="puntaje-texto" style="font-size: 1.1rem; color: #475569; margin-bottom: 20px;"></p>
+                    <button class="boton-accion" id="btn-reiniciar" style="margin: 0 auto;">
+                        <i data-lucide="rotate-ccw"></i> Repetir Quiz
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!--FOOTER -->
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <div class="grilla-pie">
+
+                <!------------------------------------------------>
+                <div class="columna-pie">
+                    <div class="logotipo-pie">
+                        <div class="icono-logo-pie"><img src="IMAGENES/teinco.png" alt="Logo TEINCO"></div>
+                        <div>
+                            <span class="titulo-logo">TEINCO SEGURO</span>
+                            <span class="subtitulo-logo">CAMPUS CARDIOPROTEGIDO Y SEGURO</span>
+                        </div>
+                    </div>
+                    <p class="descripcion-pie">Preparación, prevención y respuesta técnica ante emergencias.</p>
+                </div>
+
+                <!------------------------------------------------>
+                <div class="columna-pie">
+                    <h4 class="titulo-columna-pie">Navegación</h4>
+                    <ul class="lista-pie">
+                        <li><a href="index.html#inicio"><i data-lucide="arrow-right"></i> Inicio</a></li>
+                        <li><a href="protocolos.html"><i data-lucide="arrow-right"></i> Protocolos</a></li>
+                        <li><a href="rutas.html"><i data-lucide="arrow-right"></i> Rutas</a></li>
+                        <li><a href="autoproteccion.html"><i data-lucide="arrow-right"></i> Autoprotección</a></li>
+                        <li><a href="capacitacion.html"><i data-lucide="arrow-right"></i> Capacitación</a></li>
+                        <li><a href="#"><i data-lucide="arrow-right"></i> Políticas SG-SST</a></li>
+                    </ul>
+                </div>
+
+                <!------------------------------------------------>
+                <div class="columna-pie">
+                    <h4 class="titulo-columna-pie">Contacto SST</h4>
+                    <ul class="lista-contacto-pie">
+                        <li><i data-lucide="map-pin"></i><span>Calle 42 No. 13 - 19, Teusaquillo / Bogotá D.C.</span></li>
+                        <li><i data-lucide="mail"></i><span>seguridad.trabajo@teinco.edu.co</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!------------------------------------------------>
+            <!-- Barra inferior de derechos y créditos -->
+<div class="barra-derechos">
+    <div class="texto-derechos">
+        <p>© 2025 Corporación Tecnológica Industrial Colombiana (TEINCO). Todos los derechos reservados.</p>
+        <p class="creditos-desarrolladores">
+            <i data-lucide="code"></i> Desarrollado por <strong>Santiago Poveda</strong>, <strong>Juan Chunza</strong> y <strong>Thomas González</strong>
+        </p>
+    </div>
+    
+    <ul class="enlaces-legales">
+        <li><a href="#">Política SG-SST</a></li>
+        <li><a href="#">Prevención Sustancias</a></li>
+        <li><a href="#">Reglamento de Higiene</a></li>
+    </ul>
+</div>
+    </footer>
+
+    <!-- Libreria de iconos-->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

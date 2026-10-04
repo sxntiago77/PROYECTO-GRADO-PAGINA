@@ -1,0 +1,1599 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*------------------------------------------------------------------------------------------*/
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f1f5f9;
+    color: #0f172a;
+    overflow-x: hidden;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Tamaño base de los iconos*/
+svg.lucide {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Barra superior */
+.barra-superior {
+    height: 42px;
+    background: #021022;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    color: #d5dfeb;
+    font-size: 11px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Barra de navegacion */
+.barra-navegacion {
+    height: 96px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    border-radius: 0 0 18px 18px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Logo */
+.logotipo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logotipo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.logotipo strong {
+    display: block;
+    color: #0b2545;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logotipo small {
+    display: block;
+    color: #5684b8;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Menu */
+.barra-navegacion nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 8px;
+}
+
+.barra-navegacion nav a {
+    display: block;
+    padding: 11px 17px;
+    text-decoration: none;
+    color: #183653;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.barra-navegacion nav a:hover {
+    background: #e9f3ff;
+    color: #0868c9;
+    transform: translateY(-2px);
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Boton activo INICIO */
+.barra-navegacion nav a.activa {
+    background: linear-gradient(135deg, #116bc5, #07509e);
+    color: white;
+    box-shadow: 0 5px 15px rgba(11, 105, 199, 0.3);
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Seccion Principal */
+.portada {
+    min-height: calc(100vh - 138px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: radial-gradient(circle at 75% 40%, rgba(15, 93, 180, 0.35), transparent 35%),
+        linear-gradient(120deg, #031326 0%, #05274a 55%, #063d75 100%);
+    margin-top: -18px;
+    padding: 88px 6% 70px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Contenedor principal */
+.contenedor-portada {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.contenido-portada {
+    max-width: 700px;
+    flex: 1;
+}
+
+/*------------------------------------------------------------------------------------------*/
+.insignia {
+    display: inline-block;
+    background: rgba(22, 140, 255, 0.15);
+    border: 1px solid rgba(22, 140, 255, 0.45);
+    color: #8ec9ff;
+    padding: 7px 16px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.contenido-portada h1 {
+    font-size: clamp(45px, 5vw, 72px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.contenido-portada h1 span {
+    display: block;
+    background: linear-gradient(90deg, #ffffff, #168cff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contenido-portada > p {
+    max-width: 650px;
+    color: #b7c9dc;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Botones */
+.botones {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.botones a {
+    min-width: 210px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.boton-primario {
+    background: linear-gradient(135deg, #168cff, #0766ca);
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 119, 255, 0.3);
+}
+
+.boton-primario:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 119, 255, 0.45);
+}
+
+.boton-secundario {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.boton-secundario:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
+    border-color: #168cff;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* TARJETA INSTITUCIONAL */
+.tarjeta-institucional {
+    width: 400px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: 0.4s;
+}
+
+.tarjeta-institucional:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55);
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Logo de TEINCO a la derecha */
+.logo-tarjeta {
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    background: radial-gradient(circle, #ffffff 40%, #f1f6fb 100%);
+}
+
+.logo-tarjeta img {
+    max-width: 85%;
+    max-height: 190px;
+    object-fit: contain;
+}
+
+.info-sistema {
+    padding: 25px 30px 28px;
+    background: linear-gradient(135deg, #092c54, #051a35);
+}
+
+.info-sistema p,
+.sede-texto {
+    color: #e0ebf7;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Tarjetas */
+.seccion-herramientas {
+    width: 100%;
+    max-width: 1250px;
+    margin: 40px auto 0;
+    position: relative;
+    z-index: 2;
+}
+
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.tarjeta-modulo {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-modulo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Cajas de Iconos */
+.icono-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.icono-box svg.lucide {
+    width: 24px;
+    height: 24px;
+}
+
+.icono-box.azul-oscuro { background-color: #0f172a; }
+.icono-box.verde { background-color: #10b981; }
+.icono-box.naranja { background-color: #f59e0b; }
+.icono-box.azul-brillante { background-color: #2563eb; }
+
+/*------------------------------------------------------------------------------------------*/
+/* Badges */
+.badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.badge-azul { background-color: #e0e7ff; color: #3730a3; }
+.badge-gris { background-color: #f1f5f9; color: #64748b; }
+.badge-naranja { background-color: #fef3c7; color: #92400e; }
+
+.tarjeta-titulo {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.tarjeta-desc {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Selector de Niveles */
+.selector-nivel {
+    margin-bottom: 12px;
+}
+
+.selector-nivel label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #64748b;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+}
+
+.piso-botones {
+    display: flex;
+    background-color: #f1f5f9;
+    padding: 3px;
+    border-radius: 8px;
+    gap: 2px;
+}
+
+.btn-piso {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 6px 0;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.btn-piso.activo {
+    background-color: #1d4ed8;
+    color: white;
+}
+
+.btn-mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #e2e8f0;
+    color: #334155;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.btn-mapa:hover {
+    background-color: #cbd5e1;
+}
+
+.btn-mapa svg.lucide,
+.link-accion svg.lucide {
+    width: 14px;
+    height: 14px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Footer de la tarjeta */
+.tarjeta-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    margin-top: auto;
+}
+
+.link-accion {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.link-accion:hover {
+    text-decoration: underline;
+}
+
+.icono-escudo {
+    color: #cbd5e1;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Contenedores de antes, durante y despues */
+.seccion-sismo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.encabezado-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.etiqueta-alerta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fde8e8;
+    color: #e02424;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+}
+
+.etiqueta-alerta svg.lucide {
+    width: 14px;
+    height: 14px;
+}
+
+.titulo-principal {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    font-size: 0.95rem;
+    color: #64748b;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.tarjeta {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 360px;
+}
+
+.fondo-esquina {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    border-bottom-left-radius: 100px;
+    z-index: 1;
+}
+
+.insignia-icono {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.insignia-icono svg.lucide {
+    width: 22px;
+    height: 22px;
+}
+
+.contenido-tarjeta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.numero-paso {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.titulo-paso {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.descripcion-paso {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.pie-tarjeta {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.pie-tarjeta svg.lucide {
+    width: 16px;
+    height: 16px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Colores Tarjetas Sismo */
+.tarjeta-azul .fondo-esquina { background-color: #f0f4ff; }
+.tarjeta-azul .insignia-icono { background-color: #dbeafe; color: #2563eb; }
+.tarjeta-azul .numero-paso,
+.tarjeta-azul .pie-tarjeta svg { color: #1d4ed8; }
+
+.tarjeta-naranja .fondo-esquina { background-color: #fff7ed; }
+.tarjeta-naranja .insignia-icono { background-color: #ffedd5; color: #d97706; }
+.tarjeta-naranja .numero-paso,
+.tarjeta-naranja .pie-tarjeta svg { color: #d97706; }
+
+.tarjeta-verde .fondo-esquina { background-color: #f0fdf4; }
+.tarjeta-verde .insignia-icono { background-color: #dcfce7; color: #16a34a; }
+.tarjeta-verde .numero-paso,
+.tarjeta-verde .pie-tarjeta svg { color: #16a34a; }
+
+/*------------------------------------------------------------------------------------------*/
+/* Contactos de emergencia */
+.seccion-emergencia {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 80px 20px;
+}
+
+.encabezado-emergencia {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.subtitulo-rojo {
+    color: #e11d48;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.titulo-emergencia {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.descripcion-emergencia {
+    font-size: 0.875rem;
+    color: #64748b;
+    max-width: 420px;
+}
+
+.contenedor-contactos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.tarjeta-contacto {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e2e8f0;
+}
+
+.encabezado-tarjeta-contacto {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.icono-tarjeta {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icono-tarjeta svg.lucide {
+    width: 22px;
+    height: 22px;
+}
+
+.icono-rojo { background-color: #dc2626; color: #ffffff; }
+.icono-negro { background-color: #0f172a; color: #ffffff; }
+.icono-azul { background-color: #2563eb; color: #ffffff; }
+.icono-rosa-claro { background-color: #fde8e8; color: #e11d48; }
+
+.nombre-contacto {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.etiqueta-contacto {
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: block;
+}
+
+.texto-rojo { color: #e11d48; }
+.texto-azul { color: #2563eb; }
+
+.detalles-contacto {
+    font-size: 0.8125rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.pie-tarjeta-contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 14px;
+    margin-top: auto;
+}
+
+.etiqueta-pie {
+    display: block;
+    font-size: 0.7rem;
+    color: #94a3b8;
+}
+
+.dato-pie {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.texto-rojo-destacado { color: #dc2626; }
+
+.boton-accion {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f1f5f9;
+    color: #334155;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.boton-accion:hover {
+    background-color: #e2e8f0;
+}
+
+.boton-accion svg.lucide {
+    width: 14px;
+    height: 14px;
+}
+
+.boton-rojo {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+.boton-rojo:hover {
+    background-color: #b91c1c;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Footer */
+.pie-pagina {
+    background-color: #030712;
+    color: #9ca3af;
+    padding: 60px 20px 24px 20px;
+    font-size: 0.85rem;
+}
+
+.contenedor-pie {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* CAMBIO: 3 columnas reales (antes había 4 definidas) */
+.grilla-pie {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #1f2937;
+}
+
+.logotipo-pie {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* CAMBIO: caja blanca para que el logo se vea sobre el fondo oscuro */
+.icono-logo-pie {
+    width: 52px;
+    height: 52px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icono-logo-pie img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.titulo-logo {
+    display: block;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 1.05rem;
+}
+
+.subtitulo-logo {
+    display: block;
+    font-size: 0.65rem;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.descripcion-pie {
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    color: #9ca3af;
+    margin-bottom: 20px;
+}
+
+.insignia-sos {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1a0c0e;
+    color: #f87171;
+    border: 1px solid #450a0a;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.punto-rojo {
+    width: 8px;
+    height: 8px;
+    background-color: #ef4444;
+    border-radius: 50%;
+}
+
+.titulo-columna-pie {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lista-pie,
+.lista-contacto-pie {
+    list-style: none;
+}
+
+.lista-pie li,
+.lista-contacto-pie li {
+    margin-bottom: 12px;
+    font-size: 0.8125rem;
+}
+
+.lista-pie a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.lista-pie a:hover {
+    color: #ffffff;
+}
+
+.lista-contacto-pie li {
+    display: flex;
+    gap: 10px;
+}
+
+.lista-pie svg.lucide,
+.lista-contacto-pie svg.lucide {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    color: #168cff;
+}
+
+.lista-pie svg.lucide {
+    margin-top: 0;
+}
+
+.barra-derechos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.enlaces-legales {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.enlaces-legales a {
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.enlaces-legales a:hover {
+    color: #9ca3af;
+}
+/*------------------------------------------------------------------------------------------*/
+/* Visualizacion de los planos de TEINCO*/
+.contenedor-visor-plano {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 40px;
+}
+
+.controles-plano {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    background-color: #f8fafc;
+    padding: 18px 24px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+}
+
+.grupo-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.piso-botones {
+    display: flex;
+    background-color: #e2e8f0;
+    padding: 4px;
+    border-radius: 10px;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.btn-piso {
+    border: none;
+    background: transparent;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #475569;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-piso.activo {
+    background-color: #1d4ed8;
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(29, 78, 216, 0.3);
+}
+
+.tarjeta-plano-visor {
+    border-top: 2px dashed #e2e8f0;
+    padding-top: 25px;
+}
+
+.encabezado-plano {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.titulo-plano-actual {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 5px;
+}
+
+.grid-plano-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+@media (max-width: 850px) {
+    .grid-plano-contenido {
+        grid-template-columns: 1fr;
+    }
+}
+
+.caja-imagen-plano {
+    background-color: #f1f5f9;
+    border-radius: 16px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cbd5e1;
+    max-height: 520px;
+    overflow: hidden;
+}
+
+.caja-imagen-plano img {
+    max-width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.detalles-plano-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.titulo-leyenda {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lista-detalles-plano {
+    list-style: none;
+}
+
+.lista-detalles-plano li {
+    font-size: 0.85rem;
+    color: #475569;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    line-height: 1.5;
+}
+
+.lista-detalles-plano strong {
+    color: #0f172a;
+}
+
+.alerta-plano-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: 14px 18px;
+    border-radius: 12px;
+    color: #991b1b;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.alerta-plano-box svg {
+    color: #dc2626;
+    flex-shrink: 0;
+}
+
+
+/* Ventana Flotante Modal (Ver Plano HD en la misma página) */
+.modal-visor {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(3, 10, 20, 0.88);
+    backdrop-filter: blur(5px);
+}
+
+.contenido-modal {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cerrar-modal:hover {
+    color: #ef4444;
+}
+
+
+/*--------------------------------------------------------*/
+
+/* Banner de las leyes*/
+.banner-investigacion {
+    background: linear-gradient(135deg, #021329 0%, #083366 100%);
+    border-radius: 24px;
+    padding: 40px;
+    color: white;
+    box-shadow: 0 15px 35px rgba(2, 19, 41, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.badge-investigacion {
+    display: inline-block;
+    background: rgba(22, 140, 255, 0.2);
+    border: 1px solid rgba(22, 140, 255, 0.5);
+    color: #60a5fa;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.titulo-investigacion {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.desc-investigacion {
+    font-size: 0.92rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 900px;
+    margin-bottom: 28px;
+}
+
+.grid-stats-investigacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #38bdf8;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+.acciones-investigacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.acciones-investigacion a,
+.acciones-investigacion a.boton-primario {
+    text-decoration: none !important;
+    outline: none !important;
+    display: inline-block;
+}
+
+.acciones-investigacion .enlace-encuesta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+}
+
+
+.acciones-investigacion a:hover .enlace-encuesta {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(37, 99, 235, 0.5);
+    color: #ffffff !important;
+}
+.acciones-investigacion .enlace-encuesta svg.lucide {
+    width: 18px;
+    height: 18px;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+
+.info-director {
+    font-size: 0.82rem;
+    color: #cbd5e1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-director svg.lucide {
+    width: 16px;
+    height: 16px;
+    color: #38bdf8;
+}
+
+.visor-normativo-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.encabezado-visor-normativo {
+    margin-bottom: 25px;
+}
+
+.encabezado-visor-normativo h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.encabezado-visor-normativo p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.layout-visor-normativo {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .layout-visor-normativo {
+        grid-template-columns: 1fr;
+    }
+}
+
+.menu-leyes-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-ley-tab {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 14px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.btn-ley-tab strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #1e293b;
+}
+
+.btn-ley-tab small {
+    display: block;
+    font-size: 0.72rem;
+    color: #64748b;
+}
+
+.btn-ley-tab svg {
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.btn-ley-tab:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.btn-ley-tab.activo {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.btn-ley-tab.activo strong,
+.btn-ley-tab.activo small,
+.btn-ley-tab.activo svg {
+    color: #ffffff;
+}
+
+.panel-ley-detalle {
+    background-color: #f8fafc;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    min-height: 320px;
+}
+
+.titulo-ley-panel {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 12px 0 20px 0;
+}
+
+.bloque-texto-ley {
+    margin-bottom: 20px;
+}
+
+.bloque-texto-ley h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bloque-texto-ley p {
+    font-size: 0.875rem;
+    color: #475569;
+    line-height: 1.65;
+}
+
+/*-----------------------------------------*/
+/* Ocultar botones de radio del flujo visual */
+.radio-tab {
+    display: none !important;
+}
+
+/* Layout principal */
+.layout-visor-pure-css {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .layout-visor-pure-css {
+        grid-template-columns: 1fr;
+    }
+}
+
+.menu-leyes-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo del boton*/
+.btn-ley-tab {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 14px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-ley-tab strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #1e293b;
+}
+
+.btn-ley-tab small {
+    display: block;
+    font-size: 0.72rem;
+    color: #64748b;
+}
+
+.btn-ley-tab svg {
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.btn-ley-tab:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+/* Ocultar todos los paneles por defecto */
+.contenedor-paneles .panel-ley-detalle {
+    display: none;
+}
+
+/* Mostrar Panel 1 y marcar Label 1 */
+#tab-ley1:checked ~ .menu-leyes-lateral .label-ley1,
+#tab-ley2:checked ~ .menu-leyes-lateral .label-ley2,
+#tab-ley3:checked ~ .menu-leyes-lateral .label-ley3,
+#tab-ley4:checked ~ .menu-leyes-lateral .label-ley4,
+#tab-ley5:checked ~ .menu-leyes-lateral .label-ley5 {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+#tab-ley1:checked ~ .menu-leyes-lateral .label-ley1 strong,
+#tab-ley1:checked ~ .menu-leyes-lateral .label-ley1 small,
+#tab-ley1:checked ~ .menu-leyes-lateral .label-ley1 svg,
+#tab-ley2:checked ~ .menu-leyes-lateral .label-ley2 strong,
+#tab-ley2:checked ~ .menu-leyes-lateral .label-ley2 small,
+#tab-ley2:checked ~ .menu-leyes-lateral .label-ley2 svg,
+#tab-ley3:checked ~ .menu-leyes-lateral .label-ley3 strong,
+#tab-ley3:checked ~ .menu-leyes-lateral .label-ley3 small,
+#tab-ley3:checked ~ .menu-leyes-lateral .label-ley3 svg,
+#tab-ley4:checked ~ .menu-leyes-lateral .label-ley4 strong,
+#tab-ley4:checked ~ .menu-leyes-lateral .label-ley4 small,
+#tab-ley4:checked ~ .menu-leyes-lateral .label-ley4 svg,
+#tab-ley5:checked ~ .menu-leyes-lateral .label-ley5 strong,
+#tab-ley5:checked ~ .menu-leyes-lateral .label-ley5 small,
+#tab-ley5:checked ~ .menu-leyes-lateral .label-ley5 svg {
+    color: #ffffff;
+}
+
+/* Mostrar los paneles correspondientes */
+#tab-ley1:checked ~ .contenedor-paneles .panel-ley1,
+#tab-ley2:checked ~ .contenedor-paneles .panel-ley2,
+#tab-ley3:checked ~ .contenedor-paneles .panel-ley3,
+#tab-ley4:checked ~ .contenedor-paneles .panel-ley4,
+#tab-ley5:checked ~ .contenedor-paneles .panel-ley5 {
+    display: block;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Botón de Encuesta */
+.boton-encuesta-destacado {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #0284c7 100%);
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none !important;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.5), 0 0 15px rgba(2, 132, 199, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.boton-encuesta-destacado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transition: left 0.75s ease;
+}
+
+.boton-encuesta-destacado:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 18px 35px -5px rgba(37, 99, 235, 0.65), 0 0 25px rgba(56, 189, 248, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.boton-encuesta-destacado:hover::before {
+    left: 100%;
+}
+
+.boton-encuesta-destacado svg.lucide {
+    width: 18px;
+    height: 18px;
+    color: #ffffff;
+}
+
+.icono-flecha-encuesta {
+    transition: transform 0.3s ease;
+}
+
+.boton-encuesta-destacado:hover .icono-flecha-encuesta {
+    transform: translate(2px, -2px);
+}
+
+/**--------------------------------*/
+.creditos-desarrolladores {
+margin-top: 6px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.creditos-desarrolladores strong {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.creditos-desarrolladores svg.lucide {
+  width: 14px;
+  height: 14px;
+  color: #168cff;
+}

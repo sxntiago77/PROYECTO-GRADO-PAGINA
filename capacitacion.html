@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Capacitación y Quiz | TEINCO SEGURO</title>
+</head>
+<body>
+
+    <!------------------------------------------------>
+    <div class="barra-superior">
+        <span>CORPORACION TECNOLOGICA INDUSTRIAL COLOMBIANA</span>
+    </div>
+
+    <header class="barra-navegacion">
+
+        <div class="logotipo">
+            <img src="IMAGENES/teinco.png" alt="Logo TEINCO">
+            <div>
+                <strong>TEINCO SEGURO</strong>
+                <small>PLATAFORMA DE PREVENCION SISMICA</small>
+            </div>
+        </div>
+
+        <!------------------------------------------------>
+        <nav>
+            <ul>
+                <li><a href="index.html#inicio">INICIO</a></li>
+                <li><a href="protocolos.html">PROTOCOLOS</a></li>
+                <li><a href="rutas.html">RUTAS DE EVACUACION</a></li>
+                <li><a href="autoproteccion.html">AUTOPROTECCION</a></li>
+                <li><a href="capacitacion.html" class="activa">CAPACITACION</a></li>
+                <li><a href="politicas.html">MARCO LEGAL Y PROYECTO</a></li>
+                <li><a href="index.html#contactos">CONTACTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!------------------------------------------------>
+    <section class="seccion-sismo">
+
+        <header class="encabezado-seccion">
+            <div class="etiqueta-alerta">
+                <i data-lucide="graduation-cap"></i>
+                <span>FORMACIÓN INSTITUCIONAL Y EVALUACIÓN</span>
+            </div>
+            <h1 class="titulo-principal">Capacitación y Evaluación de Conocimientos</h1>
+            <p class="subtitulo">
+                Conoce al equipo de brigadistas de TEINCO y pon a prueba tus conocimientos sobre cómo actuar en caso de un sismo.
+            </p>
+        </header>
+
+        <!------------------------------------------------>
+        <!-- Contenedor de tarjetas -->
+        <div class="contenedor-tarjetas">
+
+            <!-- Tarjeta 1-->
+            <article class="tarjeta tarjeta-azul">
+                <div class="fondo-esquina"></div>
+                <div class="insignia-icono"><i data-lucide="users"></i></div>
+                <div class="contenido-tarjeta">
+                    <span class="numero-paso">BRIG</span>
+                    <h2 class="titulo-paso">BRIGADISTAS OFICIALES TEINCO</h2>
+                    <p class="descripcion-paso">
+                        Personal capacitado para liderazgo de evacuación y primeros auxilios:
+                        <br>• <strong>Jair Mora Figueredo</strong> (1.)
+                        <br>• <strong>Jeisson Aparicio</strong> (2.)
+                        <br>• <strong>Never Varilla</strong> (1.)
+                        <br>• <strong>Luis Alfonso Moreno Guzman</strong> (2.)
+                    </p>
+                    <div class="pie-tarjeta">
+                        <i data-lucide="shield"></i>
+                        <span>Equipo de primera respuesta institucional.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!------------------------------------------------>
+            <!-- Tarjeta 2-->
+            <article class="tarjeta tarjeta-naranja">
+                <div class="fondo-esquina"></div>
+                <div class="insignia-icono"><i data-lucide="calendar"></i></div>
+                <div class="contenido-tarjeta">
+                    <span class="numero-paso">SIM</span>
+                    <h2 class="titulo-paso">SIMULACROS INSTITUCIONALES</h2>
+                    <p class="descripcion-paso">
+                        Participación activa en el Simulacro Distrital de Bogotá y simulacros internos para medir tiempos de evacuación y conteo en puntos de reunión.
+                    </p>
+                    <div class="pie-tarjeta">
+                        <i data-lucide="info"></i>
+                        <span>Ejercicios periódicos en todas las sedes.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!------------------------------------------------>
+            <!-- Tarjeta 3-->
+            <article class="tarjeta tarjeta-verde">
+                <div class="fondo-esquina"></div>
+                <div class="insignia-icono"><i data-lucide="book-open"></i></div>
+                <div class="contenido-tarjeta">
+                    <span class="numero-paso">CURSO</span>
+                    <h2 class="titulo-paso">CÁPSULAS DE FORMACIÓN SG-SST</h2>
+                    <p class="descripcion-paso">
+                        Módulos breves sobre uso de extintores, atención de hemorragias, control de pánico y maniobras de resguardo en aulas y laboratorios.
+                    </p>
+                    <div class="pie-tarjeta">
+                        <i data-lucide="check-circle"></i>
+                        <span>Disponibles en el Campus Virtual TEINCO.</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!------------------------------------------------>
+        <!-- Modulo interactivo del quiz -->
+        <div class="contenedor-visor-plano" style="margin-top: 50px;">
+            <div class="tarjeta-plano-visor">
+                <div class="encabezado-plano">
+                    <div>
+                        <span class="badge badge-azul">Evaluación Rápida</span>
+                        <h2 class="titulo-plano-actual">Quiz de Prevención Sísmica TEINCO</h2>
+                    </div>
+
+                    <span class="badge badge-naranja" id="contador-quiz">Pregunta 1 de 10</span>
+                </div>
+                <div id="caja-quiz" class="detalles-plano-lateral">
+                    <h3 class="titulo-leyenda" id="pregunta-texto">Cargando pregunta...</h3>
+                    <div class="opciones-container" id="opciones-container" style="display: flex; flex-direction: column; gap: 12px; margin: 15px 0;">
+                    </div>
+                    <div id="mensaje-retroalimentacion" class="alerta-plano-box" style="display: none; margin-top: 15px;">
+                        <i data-lucide="info" id="icono-retro"></i>
+                        <p id="texto-retro"></p>
+                    </div>
+                    <div style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                        <button id="btn-siguiente" class="boton-accion" style="display: none;">
+                            Siguiente Pregunta <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!------------------------------------------------>
+                <!-- Pantalla final de resultados -->
+                <div id="pantalla-resultado" style="display: none; text-align: center; padding: 30px 10px;">
+                    <i data-lucide="award" style="width: 50px; height: 50px; color: #2563eb; margin-bottom: 15px;"></i>
+                    <h2 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 10px;">¡Evaluación Completada!</h2>
+                    <p id="puntaje-texto" style="font-size: 1.1rem; color: #475569; margin-bottom: 20px;"></p>
+                    <button class="boton-accion" id="btn-reiniciar" style="margin: 0 auto;">
+                        <i data-lucide="rotate-ccw"></i> Repetir Quiz
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!--FOOTER -->
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <div class="grilla-pie">
+
+                <!------------------------------------------------>
+                <div class="columna-pie">
+                    <div class="logotipo-pie">
+                        <div class="icono-logo-pie"><img src="IMAGENES/teinco.png" alt="Logo TEINCO"></div>
+                        <div>
+                            <span class="titulo-logo">TEINCO SEGURO</span>
+                            <span class="subtitulo-logo">CAMPUS CARDIOPROTEGIDO Y SEGURO</span>
+                        </div>
+                    </div>
+                    <p class="descripcion-pie">Preparación, prevención y respuesta técnica ante emergencias.</p>
+                </div>
+
+                <!------------------------------------------------>
+                <div class="columna-pie">
+                    <h4 class="titulo-columna-pie">Navegación</h4>
+                    <ul class="lista-pie">
+                        <li><a href="index.html#inicio"><i data-lucide="arrow-right"></i> Inicio</a></li>
+                        <li><a href="protocolos.html"><i data-lucide="arrow-right"></i> Protocolos</a></li>
+                        <li><a href="rutas.html"><i data-lucide="arrow-right"></i> Rutas</a></li>
+                        <li><a href="autoproteccion.html"><i data-lucide="arrow-right"></i> Autoprotección</a></li>
+                        <li><a href="capacitacion.html"><i data-lucide="arrow-right"></i> Capacitación</a></li>
+                        <li><a href="politicas.html"><i data-lucide="arrow-right"></i> Políticas SG-SST</a></li>
+                    </ul>
+                </div>
+
+                <!------------------------------------------------>
+                <div class="columna-pie">
+                    <h4 class="titulo-columna-pie">Contacto SST</h4>
+                    <ul class="lista-contacto-pie">
+                        <li><i data-lucide="map-pin"></i><span>Calle 42 No. 13 - 19, Teusaquillo / Bogotá D.C.</span></li>
+                        <li><i data-lucide="mail"></i><span>coordinacionregistroycontrol@teinco.edu.co</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!------------------------------------------------>
+            <!-- Barra inferior de derechos y creditos -->
+            <div class="barra-derechos">
+                <div class="texto-derechos">
+                    <p>© 2025 Corporación Tecnológica Industrial Colombiana (TEINCO). Todos los derechos reservados.</p>
+                    <p class="creditos-desarrolladores">
+                        <i data-lucide="code"></i> Desarrollado por <strong>Santiago Poveda</strong>, <strong>Juan Chunza</strong> y <strong>Thomas González</strong>
+                    </p>
+                </div>
+                
+                <ul class="enlaces-legales">
+                    <li><a href="politicas.html"><i data-lucide="file-check-2"></i> Política SG-SST</a></li>
+                    <li><a href="politicas.html"><i data-lucide="shield-alert"></i> Prevención Sustancias</a></li>
+                    <li><a href="politicas.html"><i data-lucide="scale"></i> Reglamento de Higiene</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Libreria de iconos-->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+
+        // Preguntas del Quiz
+        const preguntas = [
+            {
+                pregunta: "¿Cuál es la maniobra de autoprotección correcta durante la sacudida de un sismo?",
+                opciones: [
+                    "Correr inmediatamente hacia la salida",
+                    "Agáchate, cúbrete y sujétate",
+                    "Buscar la puerta más cercana",
+                    "Usar el ascensor para evacuar rápido"
+                ],
+                correcta: 1,
+                explicacion: "La técnica oficial recomendada es Agáchate, Cúbrete debajo de un elemento resistente y Sujétate."
+            },
+            {
+                pregunta: "¿Está permitido usar los ascensores durante o inmediatamente después de un sismo?",
+                opciones: [
+                    "Sí, si se evacúa rápido",
+                    "Sólo si no hay fuego",
+                    "No, está prohibido bajo cualquier circunstancia",
+                    "Sólo si lo autoriza el docente"
+                ],
+                correcta: 2,
+                explicacion: "Existe riesgo alto de atrapamiento por cortes de energía eléctrica o fallas mecánicas."
+            },
+            {
+                pregunta: "¿Cuál es el punto de encuentro exterior asignado para la Sede Teusaquillo?",
+                opciones: [
+                    "Parque Sucre",
+                    "Plaza de Bolívar",
+                    "Parque la Libertad",
+                    "Estación de Calle 45"
+                ],
+                correcta: 0,
+                explicacion: "El punto de encuentro oficial asignado para la Sede Teusaquillo es el Parque Sucre."
+            },
+            {
+                pregunta: "¿Qué norma en Colombia reglamenta la Política Nacional de Gestión del Riesgo de Desastres?",
+                opciones: [
+                    "Ley 30 de 1992",
+                    "Decreto 1072 de 2015",
+                    "Ley 1523 de 2012",
+                    "Resolución 0312 de 2019"
+                ],
+                correcta: 2,
+                explicacion: "La Ley 1523 de 2012 define la gestión del riesgo como un proceso social para la prevención y respuesta."
+            },
+            {
+                pregunta: "Si estás operando equipos en laboratorios de cómputo durante un sismo, ¿qué debes hacer?",
+                opciones: [
+                    "Apagar todos los switches primero",
+                    "Alejarte de pantallas y equipos antes de resguardarte",
+                    "Proteger el equipo con el cuerpo",
+                    "Salir corriendo inmediatamente"
+                ],
+                correcta: 1,
+                explicacion: "Debes distanciarte de pantallas, gabinetes y bastidores de computadores antes de asumir la postura de resguardo."
+            },
+            {
+                pregunta: "¿Cuál es la norma que exige la realización y capacitación obligatoria de Brigadas de Emergencia?",
+                opciones: [
+                    "Resolución 0312 de 2019",
+                    "Ley 100 de 1993",
+                    "Decreto 2247 de 1997",
+                    "Ley 115 de 1994"
+                ],
+                correcta: 0,
+                explicacion: "La Resolución 0312 de 2019 fija los Estándares Mínimos del SG-SST, incluyendo brigadas."
+            },
+            {
+                pregunta: "¿Cómo se debe realizar el desplazamiento durante una evacuación por escaleras?",
+                opciones: [
+                    "En grupos sujetados de los brazos",
+                    "Corriendo y gritando para alertar",
+                    "En fila india, en silencio y sujetándose del pasamanos",
+                    "Usando el teléfono celular para transmitir en vivo"
+                ],
+                correcta: 2,
+                explicacion: "Avanzar en fila e individuales, conservando la calma y asegurando el pasamanos evita caídas masivas."
+            },
+            {
+                pregunta: "¿Cuál es el punto de evacuación final para la Sede 7 de Agosto al salir por Cra 22 o Cra 24?",
+                opciones: [
+                    "Parque Simón Bolívar",
+                    "Isla Carrera 24 con Transversal 22",
+                    "Centro Comercial Galerías",
+                    "Parque de los Novios"
+                ],
+                correcta: 1,
+                explicacion: "El mapa SG-SST delimita la Isla Carrera 24 con Transversal 22 y Calle 61F como zona de reunión final."
+            },
+            {
+                pregunta: "Durante la evacuación, ¿qué debe hacerse con las pertenencias pesadas?",
+                opciones: [
+                    "Llevar todas las maletas y equipos",
+                    "Dejarlas y evacuar con las manos libres",
+                    "Guardarlas en casilleros con candado",
+                    "Llevar solo la torre del computador"
+                ],
+                correcta: 1,
+                explicacion: "Evacuar con las manos libres facilita el desplazamiento rápido y seguro por salidas de emergencia."
+            },
+            {
+                pregunta: "Una vez en el punto de encuentro exterior, ¿cuál es el procedimiento indicado?",
+                opciones: [
+                    "Regresar de inmediato por los objetos personales",
+                    "Retirarse a la casa sin avisar",
+                    "Permanecer agrupados y esperar el reporte/conteo del brigadista",
+                    "Ingresar a los locales vecinos"
+                ],
+                correcta: 2,
+                explicacion: "Debe realizarse el conteo de personal para verificar que no haya personas atrapadas dentro de las instalaciones."
+            }
+        ];
+
+        let idxActual = 0;
+        let puntaje = 0;
+        let respondido = false;
+
+        const elementoPregunta = document.getElementById("pregunta-texto");
+        const contenedorOpciones = document.getElementById("opciones-container");
+        const contadorQuiz = document.getElementById("contador-quiz");
+        const cajaRetro = document.getElementById("mensaje-retroalimentacion");
+        const textoRetro = document.getElementById("texto-retro");
+        const btnSiguiente = document.getElementById("btn-siguiente");
+        const cajaQuiz = document.getElementById("caja-quiz");
+        const pantallaResultado = document.getElementById("pantalla-resultado");
+        const puntajeTexto = document.getElementById("puntaje-texto");
+        const btnReiniciar = document.getElementById("btn-reiniciar");
+
+        function cargarPregunta() {
+            respondido = false;
+            cajaRetro.style.display = "none";
+            btnSiguiente.style.display = "none";
+            
+            const p = preguntas[idxActual];
+            contadorQuiz.textContent = `Pregunta ${idxActual + 1} de ${preguntas.length}`;
+            elementoPregunta.textContent = p.pregunta;
+            contenedorOpciones.innerHTML = "";
+
+            p.opciones.forEach((opcion, index) => {
+                const btn = document.createElement("button");
+                btn.className = "btn-piso";
+                btn.style.cssText = "text-align: left; padding: 12px 16px; width: 100%; font-size: 0.88rem; border: 1px solid #cbd5e1; background: #f8fafc; font-family: inherit; cursor: pointer; border-radius: 8px;";
+                btn.textContent = `${String.fromCharCode(65 + index)}. ${opcion}`;
+                btn.onclick = () => seleccionarOpcion(index, btn);
+                contenedorOpciones.appendChild(btn);
+            });
+        }
+
+        function seleccionarOpcion(index, botonSeleccionado) {
+            if (respondido) return;
+            respondido = true;
+
+            const p = preguntas[idxActual];
+            const botones = contenedorOpciones.querySelectorAll("button");
+
+            botones.forEach(b => b.disabled = true);
+
+            if (index === p.correcta) {
+                puntaje++;
+                botonSeleccionado.style.backgroundColor = "#dcfce7";
+                botonSeleccionado.style.borderColor = "#16a34a";
+                botonSeleccionado.style.color = "#15803d";
+                textoRetro.textContent = "¡Correcto! " + p.explicacion;
+                cajaRetro.className = "alerta-plano-box";
+                cajaRetro.style.backgroundColor = "#f0fdf4";
+                cajaRetro.style.borderColor = "#bbf7d0";
+                cajaRetro.style.color = "#166534";
+            } else {
+                botonSeleccionado.style.backgroundColor = "#fee2e2";
+                botonSeleccionado.style.borderColor = "#dc2626";
+                botonSeleccionado.style.color = "#991b1b";
+
+                botones[p.correcta].style.backgroundColor = "#dcfce7";
+                botones[p.correcta].style.borderColor = "#16a34a";
+                botones[p.correcta].style.color = "#15803d";
+
+                textoRetro.textContent = "Incorrecto. " + p.explicacion;
+                cajaRetro.className = "alerta-plano-box";
+                cajaRetro.style.backgroundColor = "#fef2f2";
+                cajaRetro.style.borderColor = "#fecaca";
+                cajaRetro.style.color = "#991b1b";
+            }
+
+            cajaRetro.style.display = "flex";
+            btnSiguiente.style.display = "inline-flex";
+            lucide.createIcons();
+        }
+
+        btnSiguiente.addEventListener("click", () => {
+            idxActual++;
+            if (idxActual < preguntas.length) {
+                cargarPregunta();
+            } else {
+                mostrarResultados();
+            }
+        });
+
+        function mostrarResultados() {
+            cajaQuiz.style.display = "none";
+            pantallaResultado.style.display = "block";
+            puntajeTexto.innerHTML = `Obtuviste <strong>${puntaje}</strong> de <strong>${preguntas.length}</strong> respuestas correctas (${Math.round((puntaje / preguntas.length) * 100)}%).`;
+            lucide.createIcons();
+        }
+
+        btnReiniciar.addEventListener("click", () => {
+            idxActual = 0;
+            puntaje = 0;
+            pantallaResultado.style.display = "none";
+            cajaQuiz.style.display = "block";
+            cargarPregunta();
+        });
+
+        // Iniciar Quiz
+        cargarPregunta();
+    </script>
+</body>
+</html>

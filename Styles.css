@@ -1765,3 +1765,117 @@ margin-top: 6px;
         right: 18px;
     }
 }
+
+/*------------------------------------------------------------------------------------------*/
+/* Rutas: mapa, mensajes, estimación y modal (reemplaza los estilos en línea) */
+.contenedor-mapa {
+    margin-top: 40px;
+}
+
+.mapa-gps {
+    width: 100%;
+    height: 420px;
+    border-radius: 14px;
+    border: 1px solid #cbd5e1;
+    z-index: 1;
+}
+
+.lista-detalles-plano.lista-pasos {
+    list-style: decimal;
+    padding-left: 20px;
+}
+
+.mensaje-sin-imagen {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+}
+
+.mensaje-sin-imagen svg.lucide {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+}
+
+.mensaje-sin-imagen p {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.mensaje-sin-imagen[hidden],
+.resultado-tiempo[hidden] {
+    display: none;
+}
+
+.acciones-mapa {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.boton-accion.boton-azul,
+.boton-accion.boton-contorno {
+    justify-content: center;
+    padding: 11px 14px;
+    text-decoration: none;
+}
+
+.boton-accion.boton-azul {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.boton-accion.boton-azul:hover {
+    background-color: #1d4ed8;
+}
+
+.boton-accion.boton-contorno {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+}
+
+.resultado-tiempo {
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #166534;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.resultado-tiempo small {
+    display: block;
+    margin-top: 6px;
+    font-weight: 400;
+    color: #4b5563;
+}
+
+/* Modal del plano: clic = zoom */
+.contenido-modal {
+    cursor: zoom-in;
+}
+
+.contenido-modal.ampliado {
+    max-width: none;
+    max-height: none;
+    width: 200%;
+    cursor: zoom-out;
+}
+
+button.cerrar-modal {
+    background: none;
+    border: 0;
+    line-height: 1;
+}
+.btn-piso:focus-visible,
+.boton-accion:focus-visible,
+.cerrar-modal:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}

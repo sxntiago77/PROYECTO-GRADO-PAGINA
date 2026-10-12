@@ -27,14 +27,16 @@ svg.lucide {
 /*------------------------------------------------------------------------------------------*/
 /* Barra superior */
 .barra-superior {
-    height: 42px;
+    min-height: 42px;
+    flex-wrap: wrap;
+    gap: 4px 12px;
     background: #021022;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 6%;
     color: #d5dfeb;
-    font-size: 11px;
+    font-size: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -80,7 +82,7 @@ svg.lucide {
 .logotipo small {
     display: block;
     color: #5684b8;
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -123,6 +125,7 @@ svg.lucide {
 /* Seccion Principal */
 .portada {
     min-height: calc(100vh - 138px);
+    min-height: calc(100svh - 138px);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -162,14 +165,14 @@ svg.lucide {
     color: #8ec9ff;
     padding: 7px 16px;
     border-radius: 30px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 22px;
 }
 
 .contenido-portada h1 {
-    font-size: clamp(45px, 5vw, 72px);
+    font-size: clamp(32px, 5vw, 72px);
     line-height: 1.05;
     font-weight: 800;
     letter-spacing: -2px;
@@ -300,7 +303,7 @@ svg.lucide {
 
 .grid-tarjetas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     gap: 20px;
     width: 100%;
 }
@@ -521,7 +524,7 @@ svg.lucide {
 
 .contenedor-tarjetas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 24px;
 }
 
@@ -669,7 +672,7 @@ svg.lucide {
 
 .contenedor-contactos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 24px;
 }
 
@@ -805,7 +808,6 @@ svg.lucide {
 }
 
 /*------------------------------------------------------------------------------------------*/
-/* CAMBIO: 3 columnas reales (antes había 4 definidas) */
 .grilla-pie {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1.2fr;
@@ -1117,7 +1119,7 @@ svg.lucide {
 }
 
 
-/* Ventana Flotante Modal (Ver Plano HD en la misma página) */
+/* Ventana de ver plano en HD */
 .modal-visor {
     display: none;
     position: fixed;
@@ -1200,7 +1202,7 @@ svg.lucide {
 
 .grid-stats-investigacion {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: 20px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1440,12 +1442,6 @@ svg.lucide {
     }
 }
 
-.menu-leyes-lateral {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 /* Estilo del boton*/
 .btn-ley-tab {
     display: flex;
@@ -1579,7 +1575,7 @@ svg.lucide {
     transform: translate(2px, -2px);
 }
 
-/**--------------------------------*/
+/*--------------------------------*/
 .creditos-desarrolladores {
 margin-top: 6px;
   font-size: 0.78rem;
@@ -1644,7 +1640,7 @@ margin-top: 6px;
 
     .barra-navegacion nav a {
         padding: 6px 12px;
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .grid-plano-contenido {
@@ -1664,7 +1660,7 @@ margin-top: 6px;
 /* Celulares */
 @media (max-width: 576px) {
     .barra-superior {
-        font-size: 9px;
+        font-size: 11px;
         padding: 6px 10px;
     }
 
@@ -1673,7 +1669,7 @@ margin-top: 6px;
     }
 
     .insignia {
-        font-size: 9px;
+        font-size: 11px;
         padding: 5px 12px;
     }
 
@@ -1745,7 +1741,7 @@ margin-top: 6px;
 
     .barra-navegacion nav a {
         padding: 6px 10px;
-        font-size: 10.5px;
+        font-size: 12px;
     }
 
     .titulo-principal {
@@ -1767,7 +1763,7 @@ margin-top: 6px;
 }
 
 /*------------------------------------------------------------------------------------------*/
-/* Rutas: mapa, mensajes, estimación y modal (reemplaza los estilos en línea) */
+/* Ruta y mapa */
 .contenedor-mapa {
     margin-top: 40px;
 }
@@ -1876,6 +1872,54 @@ button.cerrar-modal {
 .btn-piso:focus-visible,
 .boton-accion:focus-visible,
 .cerrar-modal:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Ajustes finales para celulares */
+@media (max-width: 576px) {
+    .mapa-gps {
+        height: 300px;
+    }
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Opciones del quiz  */
+.opciones-container {
+    min-width: 0;
+}
+
+.opcion-quiz {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 16px;
+    text-align: left;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #475569;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.opcion-quiz:hover:not(:disabled) {
+    background: #eef4ff;
+    border-color: #93c5fd;
+}
+
+.opcion-quiz:disabled {
+    cursor: default;
+}
+
+.opcion-quiz:focus-visible {
     outline: 3px solid #93c5fd;
     outline-offset: 2px;
 }

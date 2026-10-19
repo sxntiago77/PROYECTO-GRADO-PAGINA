@@ -823,8 +823,6 @@ svg.lucide {
     margin-bottom: 16px;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* CAMBIO: caja blanca para que el logo se vea sobre el fondo oscuro */
 .icono-logo-pie {
     width: 52px;
     height: 52px;
@@ -957,6 +955,7 @@ svg.lucide {
 .enlaces-legales a:hover {
     color: #9ca3af;
 }
+
 /*------------------------------------------------------------------------------------------*/
 /* Visualizacion de los planos de TEINCO*/
 .contenedor-visor-plano {
@@ -1118,7 +1117,6 @@ svg.lucide {
     flex-shrink: 0;
 }
 
-
 /* Ventana de ver plano en HD */
 .modal-visor {
     display: none;
@@ -1158,7 +1156,6 @@ svg.lucide {
 .cerrar-modal:hover {
     color: #ef4444;
 }
-
 
 /*--------------------------------------------------------*/
 
@@ -1261,20 +1258,19 @@ svg.lucide {
     text-decoration: none !important;
 }
 
-
 .acciones-investigacion a:hover .enlace-encuesta {
     background: linear-gradient(135deg, #1d4ed8, #1e40af);
     transform: translateY(-2px);
     box-shadow: 0 8px 22px rgba(37, 99, 235, 0.5);
     color: #ffffff !important;
 }
+
 .acciones-investigacion .enlace-encuesta svg.lucide {
     width: 18px;
     height: 18px;
     color: #ffffff;
     flex-shrink: 0;
 }
-
 
 .info-director {
     font-size: 0.82rem;
@@ -1442,47 +1438,12 @@ svg.lucide {
     }
 }
 
-/* Estilo del boton*/
-.btn-ley-tab {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    padding: 14px 16px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.btn-ley-tab strong {
-    display: block;
-    font-size: 0.85rem;
-    color: #1e293b;
-}
-
-.btn-ley-tab small {
-    display: block;
-    font-size: 0.72rem;
-    color: #64748b;
-}
-
-.btn-ley-tab svg {
-    color: #64748b;
-    flex-shrink: 0;
-}
-
-.btn-ley-tab:hover {
-    background-color: #f1f5f9;
-    border-color: #cbd5e1;
-}
-
 /* Ocultar todos los paneles por defecto */
 .contenedor-paneles .panel-ley-detalle {
     display: none;
 }
 
-/* Mostrar Panel 1 y marcar Label 1 */
+/* Mostrar Panel correspondiente */
 #tab-ley1:checked ~ .menu-leyes-lateral .label-ley1,
 #tab-ley2:checked ~ .menu-leyes-lateral .label-ley2,
 #tab-ley3:checked ~ .menu-leyes-lateral .label-ley3,
@@ -1510,7 +1471,6 @@ svg.lucide {
     color: #ffffff;
 }
 
-/* Mostrar los paneles correspondientes */
 #tab-ley1:checked ~ .contenedor-paneles .panel-ley1,
 #tab-ley2:checked ~ .contenedor-paneles .panel-ley2,
 #tab-ley3:checked ~ .contenedor-paneles .panel-ley3,
@@ -1575,31 +1535,28 @@ svg.lucide {
     transform: translate(2px, -2px);
 }
 
-/*--------------------------------*/
 .creditos-desarrolladores {
-margin-top: 6px;
-  font-size: 0.78rem;
-  color: #94a3b8;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+    margin-top: 6px;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .creditos-desarrolladores strong {
-  color: #38bdf8;
-  font-weight: 600;
+    color: #38bdf8;
+    font-weight: 600;
 }
 
 .creditos-desarrolladores svg.lucide {
-  width: 14px;
-  height: 14px;
-  color: #168cff;
+    width: 14px;
+    height: 14px;
+    color: #168cff;
 }
 
-
 /*------------------------------------------------------------------------------------------*/
-/*Para que se adapte a cada pantalla*/
-
+/* Media Queries de Adaptabilidad */
 @media (max-width: 1024px) {
     .contenedor-portada {
         flex-direction: column;
@@ -1626,7 +1583,6 @@ margin-top: 6px;
     }
 }
 
-/* En vertical y celulares grandes */
 @media (max-width: 850px) {
     .barra-navegacion {
         justify-content: center;
@@ -1643,10 +1599,7 @@ margin-top: 6px;
         font-size: 12px;
     }
 
-    .grid-plano-contenido {
-        grid-template-columns: 1fr;
-    }
-
+    .grid-plano-contenido,
     .layout-visor-pure-css {
         grid-template-columns: 1fr;
     }
@@ -1655,9 +1608,17 @@ margin-top: 6px;
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .grilla-pie {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .botones {
+        flex-wrap: wrap;
+    }
 }
 
-/* Celulares */
 @media (max-width: 576px) {
     .barra-superior {
         font-size: 11px;
@@ -1706,35 +1667,7 @@ margin-top: 6px;
         flex-direction: column;
         align-items: flex-start;
     }
-}
 
-
-/*------------------------------------------------------------------------------------------*/
-/* Ajustes extra de adaptacion (menu y footer) */
-@media (max-width: 1100px) {
-    .barra-navegacion {
-        justify-content: center;
-        padding: 14px 4%;
-    }
-
-    .barra-navegacion nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 850px) {
-    .grilla-pie {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .botones {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 576px) {
     .logotipo strong {
         font-size: 18px;
     }
@@ -1759,6 +1692,10 @@ margin-top: 6px;
 
     .cerrar-modal {
         right: 18px;
+    }
+
+    .mapa-gps {
+        height: 300px;
     }
 }
 
@@ -1869,6 +1806,7 @@ button.cerrar-modal {
     border: 0;
     line-height: 1;
 }
+
 .btn-piso:focus-visible,
 .boton-accion:focus-visible,
 .cerrar-modal:focus-visible {
@@ -1877,15 +1815,7 @@ button.cerrar-modal {
 }
 
 /*------------------------------------------------------------------------------------------*/
-/* Ajustes finales para celulares */
-@media (max-width: 576px) {
-    .mapa-gps {
-        height: 300px;
-    }
-}
-
-/*------------------------------------------------------------------------------------------*/
-/* Opciones del quiz  */
+/* Quiz */
 .opciones-container {
     min-width: 0;
 }
@@ -1922,4 +1852,156 @@ button.cerrar-modal {
 .opcion-quiz:focus-visible {
     outline: 3px solid #93c5fd;
     outline-offset: 2px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Sección de Videos y Multimedia */
+.seccion-videos {
+    margin-top: 50px;
+}
+
+.grid-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.tarjeta-video {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-video:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.contenedor-iframe {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    background-color: #021022;
+}
+
+.contenedor-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.info-video {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.info-video h3 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.info-video p {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.etiqueta-video {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #2563eb;
+    background-color: #eff6ff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* Esquemas y Guías Gráficas Ilustradas */
+.contenedor-infografia-pasos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.tarjeta-grafica-paso {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.caja-ilustracion {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    position: relative;
+    border: 1px dashed #cbd5e1;
+    padding: 10px;
+}
+
+.caja-ilustracion img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.insignia-numero-grafico {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1d4ed8;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.titulo-paso-grafico {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.texto-paso-grafico {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.5;
 }

@@ -89,11 +89,16 @@ svg.lucide {
 
 /*------------------------------------------------------------------------------------------*/
 /* Menu */
+.barra-navegacion nav {
+    max-width: 100%;
+}
+
 .barra-navegacion nav ul {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .barra-navegacion nav a {
@@ -105,6 +110,7 @@ svg.lucide {
     font-weight: 700;
     border-radius: 25px;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .barra-navegacion nav a:hover {
@@ -172,10 +178,10 @@ svg.lucide {
 }
 
 .contenido-portada h1 {
-    font-size: clamp(32px, 5vw, 72px);
-    line-height: 1.05;
+    font-size: clamp(28px, 5vw, 72px);
+    line-height: 1.1;
     font-weight: 800;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     margin-bottom: 25px;
 }
 
@@ -1041,12 +1047,6 @@ svg.lucide {
     align-items: start;
 }
 
-@media (max-width: 850px) {
-    .grid-plano-contenido {
-        grid-template-columns: 1fr;
-    }
-}
-
 .caja-imagen-plano {
     background-color: #f1f5f9;
     border-radius: 16px;
@@ -1324,12 +1324,6 @@ svg.lucide {
     align-items: start;
 }
 
-@media (max-width: 900px) {
-    .layout-visor-normativo {
-        grid-template-columns: 1fr;
-    }
-}
-
 .menu-leyes-lateral {
     display: flex;
     flex-direction: column;
@@ -1430,12 +1424,6 @@ svg.lucide {
     grid-template-columns: 320px 1fr;
     gap: 25px;
     align-items: start;
-}
-
-@media (max-width: 900px) {
-    .layout-visor-pure-css {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Ocultar todos los paneles por defecto */
@@ -1553,150 +1541,6 @@ svg.lucide {
     width: 14px;
     height: 14px;
     color: #168cff;
-}
-
-/*------------------------------------------------------------------------------------------*/
-/* Media Queries de Adaptabilidad */
-@media (max-width: 1024px) {
-    .contenedor-portada {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .contenido-portada {
-        max-width: 100%;
-    }
-
-    .contenido-portada > p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .botones {
-        justify-content: center;
-    }
-
-    .tarjeta-institucional {
-        width: 100%;
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 850px) {
-    .barra-navegacion {
-        justify-content: center;
-        text-align: center;
-        padding: 15px 4%;
-    }
-
-    .barra-navegacion nav ul {
-        gap: 4px;
-    }
-
-    .barra-navegacion nav a {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-
-    .grid-plano-contenido,
-    .layout-visor-pure-css {
-        grid-template-columns: 1fr;
-    }
-
-    .encabezado-emergencia {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .grilla-pie {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .botones {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 576px) {
-    .barra-superior {
-        font-size: 11px;
-        padding: 6px 10px;
-    }
-
-    .portada {
-        padding: 40px 4% 40px;
-    }
-
-    .insignia {
-        font-size: 11px;
-        padding: 5px 12px;
-    }
-
-    .botones {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .botones a {
-        width: 100%;
-        min-width: 100%;
-    }
-
-    .tarjeta-modulo {
-        padding: 18px;
-    }
-
-    .contenedor-visor-plano,
-    .banner-investigacion,
-    .visor-normativo-container {
-        padding: 16px;
-        border-radius: 14px;
-    }
-
-    .piso-botones {
-        width: 100%;
-    }
-
-    .btn-piso {
-        flex: 1 1 auto;
-    }
-
-    .barra-derechos {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logotipo strong {
-        font-size: 18px;
-    }
-
-    .barra-navegacion nav a {
-        padding: 6px 10px;
-        font-size: 12px;
-    }
-
-    .titulo-principal {
-        font-size: 1.75rem;
-    }
-
-    .enlaces-legales {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .contenido-modal {
-        max-width: 96%;
-    }
-
-    .cerrar-modal {
-        right: 18px;
-    }
-
-    .mapa-gps {
-        height: 300px;
-    }
 }
 
 /*------------------------------------------------------------------------------------------*/
@@ -2004,4 +1848,279 @@ button.cerrar-modal {
     font-size: 0.82rem;
     color: #64748b;
     line-height: 1.5;
+}
+
+/*------------------------------------------------------------------------------------------*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+ 
+img, iframe, video {
+    max-width: 100%;
+}
+ 
+.titulo-principal {
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+}
+ 
+/* ==========================================================
+   ADAPTACIÓN A DISPOSITIVOS
+   ========================================================== */
+ 
+/* Pantallas medianas */
+@media (max-width: 1024px) {
+    .contenedor-portada {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+ 
+    .contenido-portada {
+        max-width: 100%;
+    }
+ 
+    .contenido-portada > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+ 
+    .botones {
+        justify-content: center;
+    }
+ 
+    .tarjeta-institucional {
+        width: 100%;
+        max-width: 420px;
+    }
+}
+ 
+/* Tablets en vertical y celulares en horizontal */
+@media (max-width: 850px) {
+    .barra-navegacion {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 16px 4%;
+        gap: 15px;
+    }
+ 
+    .barra-navegacion nav ul {
+        justify-content: center;
+        gap: 6px;
+    }
+ 
+    .barra-navegacion nav a {
+        padding: 12px 14px;
+        font-size: 12px;
+    }
+ 
+    .grid-plano-contenido,
+    .layout-visor-pure-css,
+    .layout-visor-normativo {
+        grid-template-columns: 1fr;
+    }
+ 
+    .encabezado-emergencia {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+ 
+    .grilla-pie {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+ 
+    .botones {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+ 
+    .seccion-sismo {
+        padding: 50px 16px;
+    }
+}
+ 
+/* Celulares */
+@media (max-width: 576px) {
+    .barra-superior {
+        font-size: 11px;
+        padding: 8px 12px;
+        text-align: center;
+        justify-content: center;
+    }
+ 
+    .barra-navegacion {
+        border-radius: 0 0 14px 14px;
+        padding: 12px 10px;
+    }
+ 
+    .logotipo img {
+        width: 45px;
+        height: 45px;
+    }
+ 
+    .logotipo strong {
+        font-size: 17px;
+    }
+ 
+    .logotipo small {
+        font-size: 11px;
+    }
+ 
+    .barra-navegacion nav {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+ 
+    .barra-navegacion nav ul {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+ 
+    .barra-navegacion nav a {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+ 
+    .portada {
+        padding: 40px 16px;
+        margin-top: 0;
+        min-height: auto;
+    }
+ 
+    .insignia {
+        font-size: 11px;
+        padding: 6px 12px;
+        margin-bottom: 16px;
+    }
+ 
+    .contenido-portada h1 {
+        font-size: clamp(1.5rem, 7vw, 1.9rem);
+        margin-bottom: 16px;
+    }
+ 
+    .contenido-portada > p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+ 
+    .botones {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+ 
+    .botones a {
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 12px;
+    }
+ 
+    .tarjeta-institucional {
+        max-width: 100%;
+    }
+ 
+    .logo-tarjeta {
+        height: 200px;
+        padding: 20px;
+    }
+ 
+    .info-sistema {
+        padding: 18px 20px;
+    }
+ 
+    .tarjeta-modulo,
+    .tarjeta {
+        padding: 20px 18px;
+        min-height: auto;
+    }
+    
+    .contenedor-visor-plano,
+    .banner-investigacion,
+    .visor-normativo-container {
+        padding: 18px 14px;
+        border-radius: 16px;
+        margin-bottom: 25px;
+    }
+ 
+    .banner-investigacion {
+        padding: 24px 16px;
+    }
+ 
+    .caja-ilustracion {
+        height: 150px;
+    }
+ 
+    .grid-videos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+ 
+    .grid-videos iframe,
+    .grid-videos video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+ 
+    .info-video {
+        padding: 16px;
+    }
+ 
+    .piso-botones {
+        width: 100%;
+        flex-direction: column;
+    }
+ 
+    .btn-piso {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+ 
+    .barra-derechos {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+ 
+    .enlaces-legales {
+        flex-direction: column;
+        gap: 8px;
+    }
+ 
+    .contenido-modal {
+        max-width: 96%;
+    }
+ 
+    .cerrar-modal {
+        right: 15px;
+        top: 15px;
+        font-size: 32px;
+    }
+ 
+    .mapa-gps {
+        height: 280px;
+    }
+ 
+    .mapa-gps iframe {
+        width: 100%;
+        height: 100%;
+    }
+ 
+    .titulo-investigacion {
+        font-size: 1.35rem;
+    }
+ 
+    .acciones-investigacion {
+        flex-direction: column;
+        align-items: stretch;
+    }
+ 
+    .boton-encuesta-destacado {
+        width: 100%;
+        justify-content: center;
+    }
 }

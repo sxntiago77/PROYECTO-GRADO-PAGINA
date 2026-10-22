@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
         <span>CORPORACION TECNOLOGICA INDUSTRIAL COLOMBIANA</span>
     </div>
 
-    <!-- Navegación -->
+
     <header class="barra-navegacion">
         <div class="logotipo">
             <img src="IMAGENES/teinco.png" alt="Logo TEINCO">
@@ -39,7 +40,9 @@
         </nav>
     </header>
 
+    <!-- Seccion de planos y ruta de evacuación -->
     <section class="seccion-sismo">
+        <!-- Encabezado de la seccion -->
         <header class="encabezado-seccion">
             <div class="etiqueta-alerta">
                 <i data-lucide="map-pin"></i>
@@ -67,6 +70,7 @@
                 </div>
             </div>
 
+            <!-- Tarjeta del plano (título, imagen y detalles) -->
             <div class="tarjeta-plano-visor">
                 <div class="encabezado-plano">
                     <div>
@@ -78,6 +82,7 @@
                     </button>
                 </div>
 
+                <!-- Imagen del plano y puntos clave -->
                 <div class="grid-plano-contenido">
                     <div class="caja-imagen-plano">
                         <img id="imagen-plano-actual" alt="">
@@ -87,6 +92,7 @@
                         </div>
                     </div>
 
+                    <!-- Puntos clave y alerta del nivel -->
                     <div class="detalles-plano-lateral">
                         <h3 class="titulo-leyenda"><i data-lucide="info"></i> Puntos clave de este nivel:</h3>
                         <ul class="lista-detalles-plano" id="lista-detalles-plano"></ul>
@@ -100,7 +106,7 @@
             </div>
         </div>
 
-        <!-- Mapa de evacuación exterior de Google Maps -->
+        <!-- Mapa de evacuacion exterior de Google Maps -->
         <div class="contenedor-visor-plano contenedor-mapa">
             <div class="encabezado-plano">
                 <div>
@@ -109,6 +115,7 @@
                 </div>
             </div>
 
+            <!-- Mapa de Google Maps y pasos de evacuacion -->
             <div class="grid-plano-contenido">
                 <iframe 
                     id="mapa-gps" 
@@ -119,6 +126,7 @@
                     allowfullscreen>
                 </iframe>
 
+                <!-- Guia paso a paso y tiempo estimado -->
                 <div class="detalles-plano-lateral">
                     <h3 class="titulo-leyenda"><i data-lucide="navigation"></i> Instrucciones de evacuación paso a paso:</h3>
                     <ol class="lista-detalles-plano lista-pasos" id="lista-pasos-evacuacion"></ol>
@@ -130,6 +138,7 @@
                         </span>
                     </div>
 
+                    <!-- Acciones: tiempo estimado y enlace a Google Maps -->
                     <div class="acciones-mapa">
                         <button class="boton-accion boton-azul" id="btn-tiempo" type="button">
                             <i data-lucide="clock"></i> Estimar tiempo de salida
@@ -144,8 +153,9 @@
             </div>
         </div>
 
-        <!-- Tarjetas de Información Especifica de la Sede 7 de Agosto -->
+        <!-- Tarjetas de Informacion Especifica de la Sede 7 de Agosto -->
         <div class="contenedor-tarjetas" style="margin-top: 50px;">
+            <!-- Tarjeta 1: Sede principal -->
             <article class="tarjeta tarjeta-azul">
                 <div class="fondo-esquina"></div>
                 <div class="insignia-icono"><i data-lucide="building"></i></div>
@@ -162,6 +172,7 @@
                 </div>
             </article>
 
+            <!-- Tarjeta 2: Punto de encuentro interno -->
             <article class="tarjeta tarjeta-naranja">
                 <div class="fondo-esquina"></div>
                 <div class="insignia-icono"><i data-lucide="door-open"></i></div>
@@ -178,6 +189,7 @@
                 </div>
             </article>
 
+            <!-- Tarjeta 3: Punto de encuentro final -->
             <article class="tarjeta tarjeta-verde">
                 <div class="fondo-esquina"></div>
                 <div class="insignia-icono"><i data-lucide="flag"></i></div>
@@ -202,10 +214,11 @@
         </div>
     </section>
 
-    <!-- Pie de página -->
+    <!-- Pie de pagina -->
     <footer class="pie-pagina">
         <div class="contenedor-pie">
             <div class="grilla-pie">
+                <!-- Columna 1: logotipo y descripción -->
                 <div class="columna-pie">
                     <div class="logotipo-pie">
                         <div class="icono-logo-pie"><img src="IMAGENES/teinco.png" alt="Logo TEINCO"></div>
@@ -217,6 +230,7 @@
                     <p class="descripcion-pie">Preparación, prevención y respuesta técnica ante emergencias.</p>
                 </div>
 
+                <!-- Columna 2: enlaces de navegación -->
                 <div class="columna-pie">
                     <h4 class="titulo-columna-pie">Navegación</h4>
                     <ul class="lista-pie">
@@ -229,6 +243,7 @@
                     </ul>
                 </div>
 
+                <!-- Columna 3: datos de contacto -->
                 <div class="columna-pie">
                     <h4 class="titulo-columna-pie">Contacto SST</h4>
                     <ul class="lista-contacto-pie">
@@ -238,6 +253,7 @@
                 </div>
             </div>
 
+            <!-- Barra de derechos y creditos -->
             <div class="barra-derechos">
                 <div class="texto-derechos">
                     <p>© 2026 Corporación Tecnológica Industrial Colombiana (TEINCO). Todos los derechos reservados.</p>
@@ -263,6 +279,7 @@
             encuentroNombre: 'Isla Carrera 24 con Transversal 22 y Calle 61F',
             metros: 260,
 
+            /* Pasos de la guía de evacuación */
             pasos: [
                 'Evacúa de forma ordenada por la salida principal sobre la <strong>Ac 63 #22-39</strong>.',
                 'Avanza por la acera en dirección Occidente hacia la <strong>Avenida Carrera 24</strong>.',
@@ -270,6 +287,7 @@
                 'Ingresa a la zona segura en la <strong>Isla Carrera 24 con Transversal 22 y Calle 61F</strong> para el reporte y conteo final.'
             ],
 
+            /* Planos disponibles: título, imagen, detalles y alerta de cada nivel */
             planos: {
                 'p1-a': {
                     etiqueta: 'P1 - Bloque A', pisos: 0,
@@ -322,15 +340,18 @@
             }
         };
 
+        /* Atajo para obtener elementos por id y plano seleccionado por defecto */
         const $ = id => document.getElementById(id);
         let planoActual = 'p1-b';
 
+        /* Muestra u oculta la imagen del plano y el botón HD según haya imagen */
         function ponerImagen(hay) {
             $('imagen-plano-actual').style.display = hay ? 'block' : 'none';
             $('mensaje-sin-imagen').hidden = hay;
             $('btn-ver-hd').style.display = hay ? 'inline-flex' : 'none';
         }
 
+        /* Carga en pantalla el plano seleccionado (título, detalles, alerta e imagen) */
         function mostrarPlano(id) {
             const p = SEDE.planos[id];
             if (!p) return;
@@ -357,8 +378,10 @@
             }
         }
 
+        /* Si la imagen no carga, muestra el mensaje de plano no disponible */
         $('imagen-plano-actual').addEventListener('error', () => ponerImagen(false));
 
+        /* Crear los botones de bloque / piso a partir de los planos */
         Object.entries(SEDE.planos).forEach(([id, p]) => {
             const b = document.createElement('button');
             b.type = 'button';
@@ -369,6 +392,7 @@
             $('grupo-bloques').appendChild(b);
         });
 
+        /* Modal para ver el plano en HD */
         const modal = $('modal-plano');
         const imgModal = $('imagen-modal-hd');
 
@@ -384,6 +408,7 @@
             modal.style.display = 'none';
         }
 
+        
         $('btn-ver-hd').addEventListener('click', abrirPlanoHD);
         modal.addEventListener('click', cerrarPlanoHD);
         imgModal.addEventListener('click', e => {
@@ -400,7 +425,7 @@
         $('mapa-gps').src = `https://maps.google.com/maps?${rutaEmbed}&hl=es&output=embed`;
         $('enlace-gmaps').href = `https://www.google.com/maps/dir/?api=1&origin=${SEDE.origenCoords}&destination=${SEDE.encuentroCoords}&travelmode=walking`;
 
-        // Cargar guía paso a paso
+        // Cargar guia paso a paso
         $('lista-pasos-evacuacion').innerHTML = SEDE.pasos.map(paso => `<li>${paso}</li>`).join('');
 
         /* Tiempo estimado de evacuación o llegada al punto de encuentro */
@@ -420,6 +445,7 @@
             caja.hidden = false;
         }
 
+        /* Calcular el tiempo al presionar el boton */
         $('btn-tiempo').addEventListener('click', estimarTiempo);
 
         mostrarPlano(planoActual);

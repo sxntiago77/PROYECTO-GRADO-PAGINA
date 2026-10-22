@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
 </head>
 <body>
 
+    <!-- Barra superior -->
     <div class="barra-superior">
         <span>CORPORACION TECNOLOGICA INDUSTRIAL COLOMBIANA</span>
     </div>
 
+    <!-- Barra de navegacion -->
     <header class="barra-navegacion">
-
         <div class="logotipo">
             <img src="IMAGENES/teinco.png" alt="Logo TEINCO">
             <div>
@@ -36,8 +38,10 @@
         </nav>
     </header>
 
+    <!-- Seccion de capacitacion y evaluacion -->
     <section class="seccion-sismo">
 
+        <!-- Encabezado de la seccion -->
         <header class="encabezado-seccion">
             <div class="etiqueta-alerta">
                 <i data-lucide="graduation-cap"></i>
@@ -73,7 +77,7 @@
                 </div>
             </article>
 
-            <!-- Tarjeta 2-->
+            <!-- Tarjeta 2 SIMULACROS INSTITUCIONALES (Con indicador de estado) -->
             <article class="tarjeta tarjeta-naranja">
                 <div class="fondo-esquina"></div>
                 <div class="insignia-icono"><i data-lucide="calendar"></i></div>
@@ -83,6 +87,13 @@
                     <p class="descripcion-paso">
                         Participación activa en el Simulacro Distrital de Bogotá y simulacros internos para medir tiempos de evacuación y conteo en puntos de reunión.
                     </p>
+
+                    <!-- Estado del Simulacro -->
+                    <div style="background-color: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 10px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                        <i data-lucide="clock" style="color: #d97706; width: 18px; height: 18px;"></i>
+                        <span style="font-size: 0.78rem; font-weight: 700; color: #92400e;">Próximo Simulacro: Pendiente por definir</span>
+                    </div>
+
                     <div class="pie-tarjeta">
                         <i data-lucide="info"></i>
                         <span>Ejercicios periódicos en todas las sedes.</span>
@@ -120,10 +131,12 @@
 
                     <span class="badge badge-naranja" id="contador-quiz">Pregunta 1 de 10</span>
                 </div>
+                <!-- Caja de pregunta y opciones -->
                 <div id="caja-quiz" class="detalles-plano-lateral">
                     <h3 class="titulo-leyenda" id="pregunta-texto">Cargando pregunta...</h3>
                     <div class="opciones-container" id="opciones-container" style="display: flex; flex-direction: column; gap: 12px; margin: 15px 0;">
                     </div>
+                    <!-- Mensaje de retroalimentacion -->
                     <div id="mensaje-retroalimentacion" class="alerta-plano-box" style="display: none; margin-top: 15px;">
                         <i data-lucide="info" id="icono-retro"></i>
                         <p id="texto-retro"></p>
@@ -155,6 +168,7 @@
         <div class="contenedor-pie">
             <div class="grilla-pie">
 
+                <!-- Columna 1: logotipo y descripcion -->
                 <div class="columna-pie">
                     <div class="logotipo-pie">
                         <div class="icono-logo-pie"><img src="IMAGENES/teinco.png" alt="Logo TEINCO"></div>
@@ -166,6 +180,7 @@
                     <p class="descripcion-pie">Preparación, prevención y respuesta técnica ante emergencias.</p>
                 </div>
 
+                <!-- Columna 2: enlaces de navegacion -->
                 <div class="columna-pie">
                     <h4 class="titulo-columna-pie">Navegación</h4>
                     <ul class="lista-pie">
@@ -178,6 +193,7 @@
                     </ul>
                 </div>
 
+                <!-- Columna 3: datos de contacto -->
                 <div class="columna-pie">
                     <h4 class="titulo-columna-pie">Contacto SST</h4>
                     <ul class="lista-contacto-pie">
@@ -187,6 +203,7 @@
                 </div>
             </div>
 
+            <!-- Barra de derechos y creditos -->
             <div class="barra-derechos">
                 <div class="texto-derechos">
                     <p>© 2026 Corporación Tecnológica Industrial Colombiana (TEINCO). Todos los derechos reservados.</p>
@@ -204,12 +221,11 @@
         </div>
     </footer>
 
-    <!-- Libreria de iconos-->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
 
-        // Preguntas del Quiz
+        /* Banco de preguntas del quiz: pregunta, opciones, indice de la correcta y explicacion */
         const preguntas = [
             {
                 pregunta: "¿Cuál es la maniobra de autoprotección correcta durante la sacudida de un sismo?",
@@ -323,10 +339,12 @@
             }
         ];
 
+        /* Estado del quiz */
         let idxActual = 0;
         let puntaje = 0;
         let respondido = false;
 
+        /* Elementos usados por el quiz */
         const elementoPregunta = document.getElementById("pregunta-texto");
         const contenedorOpciones = document.getElementById("opciones-container");
         const contadorQuiz = document.getElementById("contador-quiz");
@@ -338,6 +356,7 @@
         const puntajeTexto = document.getElementById("puntaje-texto");
         const btnReiniciar = document.getElementById("btn-reiniciar");
 
+        /* Muestra la pregunta actual y crea los botones de opciones */
         function cargarPregunta() {
             respondido = false;
             cajaRetro.style.display = "none";
@@ -357,6 +376,7 @@
             });
         }
 
+        /* Valida la respuesta, colorea las opciones y muestra la explicacion */
         function seleccionarOpcion(index, botonSeleccionado) {
             if (respondido) return;
             respondido = true;
@@ -397,6 +417,7 @@
             lucide.createIcons();
         }
 
+        /* Avanzar a la siguiente pregunta o mostrar los resultados */
         btnSiguiente.addEventListener("click", () => {
             idxActual++;
             if (idxActual < preguntas.length) {
@@ -406,6 +427,7 @@
             }
         });
 
+        /* Pantalla final con el puntaje obtenido */
         function mostrarResultados() {
             cajaQuiz.style.display = "none";
             pantallaResultado.style.display = "block";
@@ -413,6 +435,7 @@
             lucide.createIcons();
         }
 
+        /* Reiniciar el quiz */
         btnReiniciar.addEventListener("click", () => {
             idxActual = 0;
             puntaje = 0;
@@ -421,6 +444,7 @@
             cargarPregunta();
         });
 
+        /* Iniciar el quiz al cargar la pagina */
         cargarPregunta();
     </script>
 </body>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +40,7 @@
     <!-- Seccion principal -->
     <section class="portada">
         <div class="contenedor-portada">
+            <!-- Texto principal de la portada -->
             <div class="contenido-portada">
                 <div class="insignia">
                     <span class="mensaje">SISTEMA DE PREVENCION Y RESPUESTA SISMICA</span>
@@ -46,6 +48,7 @@
                 <h1>Preparados para actuar <span>ante un sismo</span></h1>
                 <p>Información oficial, protocolos verificados de autoprotección y mapas de repliegue para salvaguardar la vida de estudiantes, docentes y personal de TEINCO.</p>
 
+                <!-- Botones de acceso rápido -->
                 <div class="botones">
                     <a href="protocolos.html" class="boton-primario"><i data-lucide="shield"></i> VER PROTOCOLOS</a>
                     <a href="rutas.html" class="boton-secundario"><i data-lucide="map-pin"></i> CONSULTAR RUTAS</a>
@@ -57,12 +60,14 @@
                 <div class="logo-tarjeta">
                     <img src="IMAGENES/teinco.png" alt="Logo TEINCO">
                 </div>
+                <!-- Datos de la institucion -->
                 <div class="info-sistema">
                     <p class="sede-texto">CORPORACIÓN TECNOLÓGICA INDUSTRIAL COLOMBIANA<br><small style="color: #93c5fd;">Sede 7 de Agosto (Principal)</small></p>
                 </div>
             </div>
         </div>
 
+        <!-- Módulos de acceso rapido (tarjetas) -->
         <div class="seccion-herramientas">
             <div class="grid-tarjetas">
 
@@ -133,6 +138,7 @@
 
     <!-- Contenedores de antes, durante y despues -->
     <section class="seccion-sismo">
+        <!-- Encabezado de la sección (etiqueta, título y subtítulo) -->
         <header class="encabezado-seccion">
             <div class="etiqueta-alerta">
                 <i data-lucide="siren" class="icono-etiqueta"></i>
@@ -144,8 +150,10 @@
             </p>
         </header>
 
+        <!-- Tarjetas de los tres pasos -->
         <div class="contenedor-tarjetas">
 
+            <!-- Tarjeta 1: Manten la calma -->
             <article class="tarjeta tarjeta-azul">
                 <div class="fondo-esquina"></div>
                 <div class="insignia-icono">
@@ -164,6 +172,7 @@
                 </div>
             </article>
 
+            <!-- Tarjeta 2: Protegete -->
             <article class="tarjeta tarjeta-naranja">
                 <div class="fondo-esquina"></div>
                 <div class="insignia-icono">
@@ -182,6 +191,7 @@
                 </div>
             </article>
 
+            <!-- Tarjeta 3: Evacua -->
             <article class="tarjeta tarjeta-verde">
                 <div class="fondo-esquina"></div>
                 <div class="insignia-icono">
@@ -206,6 +216,7 @@
     <!-- Contactos de emergencia -->
     <section class="seccion-emergencia" id="contactos">
 
+        <!-- Encabezado de la sección de emergencia -->
         <header class="encabezado-emergencia">
             <div class="texto-encabezado">
                 <span class="subtitulo-rojo">LÍNEAS DE ASISTENCIA INMEDIATA</span>
@@ -216,8 +227,10 @@
             </p>
         </header>
 
+        <!-- Tarjetas de contactos -->
         <div class="contenedor-contactos">
 
+            <!-- Contacto 1: Brigada TEINCO -->
             <article class="tarjeta-contacto">
                 <div class="encabezado-tarjeta-contacto">
                     <div class="icono-tarjeta icono-rojo">
@@ -233,6 +246,7 @@
                 </p>
             </article>
 
+            <!-- Contacto 2: Seguridad del Campus -->
             <article class="tarjeta-contacto">
                 <div class="encabezado-tarjeta-contacto">
                     <div class="icono-tarjeta icono-negro">
@@ -257,6 +271,7 @@
                 </div>
             </article>
 
+            <!-- Contacto 3: Coordinacion SST -->
             <article class="tarjeta-contacto">
                 <div class="encabezado-tarjeta-contacto">
                     <div class="icono-tarjeta icono-azul">
@@ -281,6 +296,7 @@
                 </div>
             </article>
 
+            <!-- Contacto 4: Línea Única Distrital -->
             <article class="tarjeta-contacto">
                 <div class="encabezado-tarjeta-contacto">
                     <div class="icono-tarjeta icono-rosa-claro">
@@ -308,12 +324,56 @@
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA -->
+    <!-- Buzón de Reporte de Riesgos Locativos en el Index -->
+    <section class="seccion-sismo" style="padding-top: 0;">
+        <div class="seccion-reporte-riesgo">
+            <div class="encabezado-seccion" style="text-align: left; margin-bottom: 10px;">
+                <span class="badge badge-naranja">Buzón de Prevención SST</span>
+                <h2 class="titulo-principal" style="font-size: 1.4rem;">Reportar una Condición de Riesgo en el Campus</h2>
+                <p class="subtitulo" style="margin: 0; max-width: 100%;">Informa sobre extintores vencidos, pasillos obstruidos o luminarias sueltas.</p>
+            </div>
+
+            <!-- Formulario de reporte (muestra una alerta al enviar) -->
+            <form onsubmit="alert('¡Gracias! Tu reporte ha sido enviado a la Coordinación SG-SST.'); return false;">
+                <div class="form-grid-reporte">
+                    <div class="campo-form">
+                        <label>Sede / Edificio</label>
+                        <select required>
+                            <option>Sede 7 de Agosto (Principal)</option>
+                        </select>
+                    </div>
+                    <div class="campo-form">
+                        <label>Ubicación Específica</label>
+                        <input type="text" placeholder="Ej: Pasillo Piso 2 Bloque B" required>
+                    </div>
+                    <div class="campo-form">
+                        <label>Tipo de Riesgo</label>
+                        <select required>
+                            <option>Obstrucción de Ruta de Evacuación</option>
+                            <option>Señaletica / Extintor con Falla</option>
+                            <option>Riesgo Locativo / Estructural</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="campo-form" style="margin-top: 15px;">
+                    <label>Descripción detallada</label>
+                    <textarea rows="3" placeholder="Describe brevemente el hallazgo..." required></textarea>
+                </div>
+                <button type="submit" class="boton-accion boton-rojo" style="margin-top: 15px;">
+                    <i data-lucide="send"></i> Enviar Reporte a SST
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- PIE DE PAGINA -->
     <footer class="pie-pagina">
         <div class="contenedor-pie">
 
+            <!-- Columnas del footer -->
             <div class="grilla-pie">
 
+                <!-- Columna 1: logotipo y descripción -->
                 <div class="columna-pie">
                     <div class="logotipo-pie">
                         <div class="icono-logo-pie">
@@ -333,6 +393,7 @@
                     </div>
                 </div>
 
+                <!-- Columna 2: enlaces de navegación -->
                 <div class="columna-pie">
                     <h4 class="titulo-columna-pie">Navegación Institucional</h4>
                     <ul class="lista-pie">
@@ -344,6 +405,7 @@
                     </ul>
                 </div>
 
+                <!-- Columna 3: datos de contacto -->
                 <div class="columna-pie">
                     <h4 class="titulo-columna-pie">Sede Principal Bogotá</h4>
                     <ul class="lista-contacto-pie">
@@ -368,6 +430,7 @@
 
             </div>
 
+            <!-- Barra de derechos y créditos -->
             <div class="barra-derechos">
                 <div class="texto-derechos">
                     <p>© 2026 Corporación Tecnológica Industrial Colombiana (TEINCO). Todos los derechos reservados.</p>
@@ -379,10 +442,13 @@
         </div>
     </footer>
 
+    <!-- Librería de iconos Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
+        /* Inicializar los iconos de Lucide */
         lucide.createIcons();
 
+        /* Marcar como activo el boton de piso seleccionado en la tarjeta de rutas */
         document.querySelectorAll('.btn-piso').forEach(function (btn) {
             btn.addEventListener('click', function () {
                 document.querySelectorAll('.btn-piso').forEach(function (b) { b.classList.remove('activo'); });

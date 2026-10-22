@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/*------------------------------------------------------------------------------------------*/
 body {
     font-family: "Poppins", sans-serif;
     background: #f1f5f9;
@@ -16,15 +16,13 @@ body {
     overflow-x: hidden;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Tamaño base de los iconos*/
+/* Iconos Lucide */
 svg.lucide {
     width: 18px;
     height: 18px;
     flex-shrink: 0;
 }
 
-/*------------------------------------------------------------------------------------------*/
 /* Barra superior */
 .barra-superior {
     min-height: 42px;
@@ -40,7 +38,6 @@ svg.lucide {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/*------------------------------------------------------------------------------------------*/
 /* Barra de navegacion */
 .barra-navegacion {
     min-height: 96px;
@@ -57,8 +54,7 @@ svg.lucide {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Logo */
+/* Logotipo del menu */
 .logotipo {
     display: flex;
     align-items: center;
@@ -87,8 +83,7 @@ svg.lucide {
     letter-spacing: 1px;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Menu */
+/* Enlaces del menu */
 .barra-navegacion nav {
     max-width: 100%;
 }
@@ -119,15 +114,12 @@ svg.lucide {
     transform: translateY(-2px);
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Boton activo INICIO */
 .barra-navegacion nav a.activa {
     background: linear-gradient(135deg, #116bc5, #07509e);
     color: white;
     box-shadow: 0 5px 15px rgba(11, 105, 199, 0.3);
 }
 
-/*------------------------------------------------------------------------------------------*/
 /* Seccion Principal */
 .portada {
     min-height: calc(100vh - 138px);
@@ -144,8 +136,7 @@ svg.lucide {
     padding: 88px 6% 70px;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Contenedor principal */
+/* Contenedor y texto de la portada */
 .contenedor-portada {
     width: 100%;
     max-width: 1250px;
@@ -163,7 +154,7 @@ svg.lucide {
     flex: 1;
 }
 
-/*------------------------------------------------------------------------------------------*/
+/* Insignia superior de la portada */
 .insignia {
     display: inline-block;
     background: rgba(22, 140, 255, 0.15);
@@ -177,6 +168,7 @@ svg.lucide {
     margin-bottom: 22px;
 }
 
+/* Titulo y descripcion de la portada */
 .contenido-portada h1 {
     font-size: clamp(28px, 5vw, 72px);
     line-height: 1.1;
@@ -201,8 +193,7 @@ svg.lucide {
     margin-bottom: 35px;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Botones */
+/* Botones de la portada */
 .botones {
     display: flex;
     gap: 18px;
@@ -247,8 +238,7 @@ svg.lucide {
     border-color: #168cff;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* TARJETA INSTITUCIONAL */
+/* Tarjeta institucional de la portada */
 .tarjeta-institucional {
     width: 400px;
     flex-shrink: 0;
@@ -265,8 +255,6 @@ svg.lucide {
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55);
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Logo de TEINCO a la derecha */
 .logo-tarjeta {
     height: 270px;
     display: flex;
@@ -282,6 +270,7 @@ svg.lucide {
     object-fit: contain;
 }
 
+/* Informacion de la institucion dentro de la tarjeta */
 .info-sistema {
     padding: 25px 30px 28px;
     background: linear-gradient(135deg, #092c54, #051a35);
@@ -297,8 +286,7 @@ svg.lucide {
     letter-spacing: 0.5px;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Tarjetas */
+/* Modulos de acceso rapido */
 .seccion-herramientas {
     width: 100%;
     max-width: 1250px;
@@ -314,6 +302,7 @@ svg.lucide {
     width: 100%;
 }
 
+/* Tarjeta de cada modulo */
 .tarjeta-modulo {
     background-color: #ffffff;
     border-radius: 16px;
@@ -330,6 +319,7 @@ svg.lucide {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
+/* Encabezado e icono de la tarjeta */
 .tarjeta-header {
     display: flex;
     justify-content: space-between;
@@ -337,8 +327,6 @@ svg.lucide {
     margin-bottom: 20px;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Cajas de Iconos */
 .icono-box {
     width: 44px;
     height: 44px;
@@ -359,8 +347,7 @@ svg.lucide {
 .icono-box.naranja { background-color: #f59e0b; }
 .icono-box.azul-brillante { background-color: #2563eb; }
 
-/*------------------------------------------------------------------------------------------*/
-/* Badges */
+/* Insignia, titulo y descripcion de la tarjeta */
 .badge {
     font-size: 0.7rem;
     font-weight: 700;
@@ -388,8 +375,7 @@ svg.lucide {
     flex-grow: 1;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Selector de Niveles */
+/* Selector de nivel y botones de piso */
 .selector-nivel {
     margin-bottom: 12px;
 }
@@ -430,6 +416,7 @@ svg.lucide {
     color: white;
 }
 
+/* Boton de mapa, pie de tarjeta y enlaces de accion */
 .btn-mapa {
     display: flex;
     align-items: center;
@@ -455,8 +442,6 @@ svg.lucide {
     height: 14px;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Footer de la tarjeta */
 .tarjeta-footer {
     display: flex;
     justify-content: space-between;
@@ -479,11 +464,11 @@ svg.lucide {
     text-decoration: underline;
 }
 
+/* Icono de escudo */
 .icono-escudo {
     color: #cbd5e1;
 }
 
-/*------------------------------------------------------------------------------------------*/
 /* Contenedores de antes, durante y despues */
 .seccion-sismo {
     max-width: 1200px;
@@ -491,6 +476,7 @@ svg.lucide {
     padding: 80px 20px;
 }
 
+/* Encabezado de la seccion */
 .encabezado-seccion {
     text-align: center;
     margin-bottom: 40px;
@@ -528,6 +514,7 @@ svg.lucide {
     margin: 0 auto;
 }
 
+/* Grilla de tarjetas */
 .contenedor-tarjetas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
@@ -548,6 +535,7 @@ svg.lucide {
     min-height: 360px;
 }
 
+/* Decoracion de las tarjetas (esquinas e iconos) */
 .fondo-esquina {
     position: absolute;
     top: 0;
@@ -576,6 +564,7 @@ svg.lucide {
     height: 22px;
 }
 
+/* Contenido de las tarjetas */
 .contenido-tarjeta {
     position: relative;
     z-index: 2;
@@ -606,6 +595,7 @@ svg.lucide {
     flex-grow: 1;
 }
 
+/* Pie de las tarjetas */
 .pie-tarjeta {
     display: flex;
     align-items: flex-start;
@@ -622,24 +612,24 @@ svg.lucide {
     height: 16px;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Colores Tarjetas Sismo */
+/* Variante azul (antes) */
 .tarjeta-azul .fondo-esquina { background-color: #f0f4ff; }
 .tarjeta-azul .insignia-icono { background-color: #dbeafe; color: #2563eb; }
 .tarjeta-azul .numero-paso,
 .tarjeta-azul .pie-tarjeta svg { color: #1d4ed8; }
 
+/* Variante naranja (durante) */
 .tarjeta-naranja .fondo-esquina { background-color: #fff7ed; }
 .tarjeta-naranja .insignia-icono { background-color: #ffedd5; color: #d97706; }
 .tarjeta-naranja .numero-paso,
 .tarjeta-naranja .pie-tarjeta svg { color: #d97706; }
 
+/* Variante verde (despues) */
 .tarjeta-verde .fondo-esquina { background-color: #f0fdf4; }
 .tarjeta-verde .insignia-icono { background-color: #dcfce7; color: #16a34a; }
 .tarjeta-verde .numero-paso,
 .tarjeta-verde .pie-tarjeta svg { color: #16a34a; }
 
-/*------------------------------------------------------------------------------------------*/
 /* Contactos de emergencia */
 .seccion-emergencia {
     max-width: 1200px;
@@ -647,6 +637,7 @@ svg.lucide {
     padding: 40px 20px 80px 20px;
 }
 
+/* Encabezado de la seccion de emergencia */
 .encabezado-emergencia {
     display: flex;
     justify-content: space-between;
@@ -676,6 +667,7 @@ svg.lucide {
     max-width: 420px;
 }
 
+/* Tarjetas de contactos */
 .contenedor-contactos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
@@ -693,6 +685,7 @@ svg.lucide {
     border: 1px solid #e2e8f0;
 }
 
+/* Encabezado e icono de la tarjeta de contacto */
 .encabezado-tarjeta-contacto {
     display: flex;
     align-items: center;
@@ -720,6 +713,7 @@ svg.lucide {
 .icono-azul { background-color: #2563eb; color: #ffffff; }
 .icono-rosa-claro { background-color: #fde8e8; color: #e11d48; }
 
+/* Datos del contacto */
 .nombre-contacto {
     font-size: 1rem;
     font-weight: 700;
@@ -742,6 +736,7 @@ svg.lucide {
     margin-bottom: 20px;
 }
 
+/* Pie de la tarjeta de contacto */
 .pie-tarjeta-contacto {
     display: flex;
     justify-content: space-between;
@@ -765,6 +760,7 @@ svg.lucide {
 
 .texto-rojo-destacado { color: #dc2626; }
 
+/* Botones de accion */
 .boton-accion {
     display: inline-flex;
     align-items: center;
@@ -799,7 +795,6 @@ svg.lucide {
     background-color: #b91c1c;
 }
 
-/*------------------------------------------------------------------------------------------*/
 /* Footer */
 .pie-pagina {
     background-color: #030712;
@@ -808,12 +803,12 @@ svg.lucide {
     font-size: 0.85rem;
 }
 
+/* Grilla y columnas del footer */
 .contenedor-pie {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/*------------------------------------------------------------------------------------------*/
 .grilla-pie {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1.2fr;
@@ -822,6 +817,7 @@ svg.lucide {
     border-bottom: 1px solid #1f2937;
 }
 
+/* Logotipo del footer */
 .logotipo-pie {
     display: flex;
     align-items: center;
@@ -861,6 +857,7 @@ svg.lucide {
     font-weight: 600;
 }
 
+/* Descripcion e insignia SOS */
 .descripcion-pie {
     font-size: 0.8125rem;
     line-height: 1.6;
@@ -888,6 +885,7 @@ svg.lucide {
     border-radius: 50%;
 }
 
+/* Listas y enlaces del footer */
 .titulo-columna-pie {
     color: #ffffff;
     font-size: 1rem;
@@ -936,6 +934,7 @@ svg.lucide {
     margin-top: 0;
 }
 
+/* Barra de derechos y enlaces legales */
 .barra-derechos {
     display: flex;
     justify-content: space-between;
@@ -962,7 +961,6 @@ svg.lucide {
     color: #9ca3af;
 }
 
-/*------------------------------------------------------------------------------------------*/
 /* Visualizacion de los planos de TEINCO*/
 .contenedor-visor-plano {
     background-color: #ffffff;
@@ -973,6 +971,7 @@ svg.lucide {
     margin-bottom: 40px;
 }
 
+/* Controles del visor (bloque y piso) */
 .controles-plano {
     display: flex;
     gap: 30px;
@@ -990,35 +989,7 @@ svg.lucide {
     gap: 8px;
 }
 
-.piso-botones {
-    display: flex;
-    background-color: #e2e8f0;
-    padding: 4px;
-    border-radius: 10px;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-.btn-piso {
-    border: none;
-    background: transparent;
-    padding: 8px 16px;
-    font-family: inherit;
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: #475569;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-}
-
-.btn-piso.activo {
-    background-color: #1d4ed8;
-    color: #ffffff;
-    box-shadow: 0 2px 6px rgba(29, 78, 216, 0.3);
-}
-
+/* Tarjeta del visor y encabezado */
 .tarjeta-plano-visor {
     border-top: 2px dashed #e2e8f0;
     padding-top: 25px;
@@ -1040,6 +1011,7 @@ svg.lucide {
     margin-top: 5px;
 }
 
+/* Imagen del plano y detalles laterales */
 .grid-plano-contenido {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1067,6 +1039,7 @@ svg.lucide {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Leyenda y alerta del plano */
 .detalles-plano-lateral {
     display: flex;
     flex-direction: column;
@@ -1117,7 +1090,7 @@ svg.lucide {
     flex-shrink: 0;
 }
 
-/* Ventana de ver plano en HD */
+/* Modal de planos HD */
 .modal-visor {
     display: none;
     position: fixed;
@@ -1140,6 +1113,14 @@ svg.lucide {
     object-fit: contain;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    cursor: zoom-in;
+}
+
+.contenido-modal.ampliado {
+    max-width: none;
+    max-height: none;
+    width: 200%;
+    cursor: zoom-out;
 }
 
 .cerrar-modal {
@@ -1151,15 +1132,16 @@ svg.lucide {
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
+    background: none;
+    border: 0;
+    line-height: 1;
 }
 
 .cerrar-modal:hover {
     color: #ef4444;
 }
 
-/*--------------------------------------------------------*/
-
-/* Banner de las leyes*/
+/* Banner del proyecto de investigacion */
 .banner-investigacion {
     background: linear-gradient(135deg, #021329 0%, #083366 100%);
     border-radius: 24px;
@@ -1197,6 +1179,7 @@ svg.lucide {
     margin-bottom: 28px;
 }
 
+/* Estadisticas de la investigacion */
 .grid-stats-investigacion {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
@@ -1225,6 +1208,7 @@ svg.lucide {
     margin-top: 4px;
 }
 
+/* Acciones e informacion del director */
 .acciones-investigacion {
     display: flex;
     align-items: center;
@@ -1234,42 +1218,10 @@ svg.lucide {
     margin-top: 15px;
 }
 
-.acciones-investigacion a,
-.acciones-investigacion a.boton-primario {
+.acciones-investigacion a {
     text-decoration: none !important;
     outline: none !important;
     display: inline-block;
-}
-
-.acciones-investigacion .enlace-encuesta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: #ffffff !important;
-    font-size: 0.85rem;
-    font-weight: 700;
-    padding: 12px 24px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
-    transition: all 0.3s ease;
-    text-decoration: none !important;
-}
-
-.acciones-investigacion a:hover .enlace-encuesta {
-    background: linear-gradient(135deg, #1d4ed8, #1e40af);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(37, 99, 235, 0.5);
-    color: #ffffff !important;
-}
-
-.acciones-investigacion .enlace-encuesta svg.lucide {
-    width: 18px;
-    height: 18px;
-    color: #ffffff;
-    flex-shrink: 0;
 }
 
 .info-director {
@@ -1290,6 +1242,7 @@ svg.lucide {
     color: #38bdf8;
 }
 
+/* Visor de normativa con pestanas en CSS puro */
 .visor-normativo-container {
     background-color: #ffffff;
     border-radius: 20px;
@@ -1298,26 +1251,12 @@ svg.lucide {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.encabezado-visor-normativo {
-    margin-bottom: 25px;
+.radio-tab {
+    display: none !important;
 }
 
-.encabezado-visor-normativo h3 {
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #0f172a;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.encabezado-visor-normativo p {
-    font-size: 0.85rem;
-    color: #64748b;
-    margin-top: 4px;
-}
-
-.layout-visor-normativo {
+/* Distribucion del visor y menu lateral de leyes */
+.layout-visor-pure-css {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 25px;
@@ -1361,77 +1300,11 @@ svg.lucide {
     flex-shrink: 0;
 }
 
-.btn-ley-tab:hover {
-    background-color: #f1f5f9;
-    border-color: #cbd5e1;
-}
-
-.btn-ley-tab.activo {
-    background-color: #1d4ed8;
-    border-color: #1d4ed8;
-}
-
-.btn-ley-tab.activo strong,
-.btn-ley-tab.activo small,
-.btn-ley-tab.activo svg {
-    color: #ffffff;
-}
-
-.panel-ley-detalle {
-    background-color: #f8fafc;
-    border-radius: 16px;
-    padding: 30px;
-    border: 1px solid #e2e8f0;
-    min-height: 320px;
-}
-
-.titulo-ley-panel {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: #0f172a;
-    margin: 12px 0 20px 0;
-}
-
-.bloque-texto-ley {
-    margin-bottom: 20px;
-}
-
-.bloque-texto-ley h4 {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #334155;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.bloque-texto-ley p {
-    font-size: 0.875rem;
-    color: #475569;
-    line-height: 1.65;
-}
-
-/*-----------------------------------------*/
-/* Ocultar botones de radio del flujo visual */
-.radio-tab {
-    display: none !important;
-}
-
-/* Layout principal */
-.layout-visor-pure-css {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 25px;
-    align-items: start;
-}
-
-/* Ocultar todos los paneles por defecto */
+/* Paneles de leyes solo se muestra el seleccionado */
 .contenedor-paneles .panel-ley-detalle {
     display: none;
 }
 
-/* Mostrar Panel correspondiente */
 #tab-ley1:checked ~ .menu-leyes-lateral .label-ley1,
 #tab-ley2:checked ~ .menu-leyes-lateral .label-ley2,
 #tab-ley3:checked ~ .menu-leyes-lateral .label-ley3,
@@ -1467,8 +1340,39 @@ svg.lucide {
     display: block;
 }
 
-/*------------------------------------------------------------------------------------------*/
-/* Botón de Encuesta */
+/* Panel de detalle de cada ley */
+.panel-ley-detalle {
+    background-color: #f8fafc;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    min-height: 320px;
+}
+
+.titulo-ley-panel {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 12px 0 20px 0;
+}
+
+.bloque-texto-ley h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bloque-texto-ley p {
+    font-size: 0.875rem;
+    color: #475569;
+    line-height: 1.65;
+}
+
+/* Boton de encuesta destacado */
 .boton-encuesta-destacado {
     position: relative;
     display: inline-flex;
@@ -1488,41 +1392,7 @@ svg.lucide {
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.boton-encuesta-destacado::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
-    transition: left 0.75s ease;
-}
-
-.boton-encuesta-destacado:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 18px 35px -5px rgba(37, 99, 235, 0.65), 0 0 25px rgba(56, 189, 248, 0.5);
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-.boton-encuesta-destacado:hover::before {
-    left: 100%;
-}
-
-.boton-encuesta-destacado svg.lucide {
-    width: 18px;
-    height: 18px;
-    color: #ffffff;
-}
-
-.icono-flecha-encuesta {
-    transition: transform 0.3s ease;
-}
-
-.boton-encuesta-destacado:hover .icono-flecha-encuesta {
-    transform: translate(2px, -2px);
-}
-
+/* Creditos de los desarrolladores */
 .creditos-desarrolladores {
     margin-top: 6px;
     font-size: 0.78rem;
@@ -1537,18 +1407,7 @@ svg.lucide {
     font-weight: 600;
 }
 
-.creditos-desarrolladores svg.lucide {
-    width: 14px;
-    height: 14px;
-    color: #168cff;
-}
-
-/*------------------------------------------------------------------------------------------*/
-/* Ruta y mapa */
-.contenedor-mapa {
-    margin-top: 40px;
-}
-
+/* Mapa de ruta  */
 .mapa-gps {
     width: 100%;
     height: 420px;
@@ -1557,109 +1416,7 @@ svg.lucide {
     z-index: 1;
 }
 
-.lista-detalles-plano.lista-pasos {
-    list-style: decimal;
-    padding-left: 20px;
-}
-
-.mensaje-sin-imagen {
-    width: 100%;
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fef2f2;
-    color: #991b1b;
-    border: 1px solid #fecaca;
-    border-radius: 12px;
-}
-
-.mensaje-sin-imagen svg.lucide {
-    width: 44px;
-    height: 44px;
-    margin-bottom: 10px;
-}
-
-.mensaje-sin-imagen p {
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-
-.mensaje-sin-imagen[hidden],
-.resultado-tiempo[hidden] {
-    display: none;
-}
-
-.acciones-mapa {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.boton-accion.boton-azul,
-.boton-accion.boton-contorno {
-    justify-content: center;
-    padding: 11px 14px;
-    text-decoration: none;
-}
-
-.boton-accion.boton-azul {
-    background-color: #2563eb;
-    color: #ffffff;
-}
-
-.boton-accion.boton-azul:hover {
-    background-color: #1d4ed8;
-}
-
-.boton-accion.boton-contorno {
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
-}
-
-.resultado-tiempo {
-    font-size: 0.85rem;
-    font-weight: 700;
-    line-height: 1.5;
-    color: #166534;
-    background-color: #f0fdf4;
-    border: 1px solid #bbf7d0;
-    border-radius: 8px;
-    padding: 12px;
-}
-
-.resultado-tiempo small {
-    display: block;
-    margin-top: 6px;
-    font-weight: 400;
-    color: #4b5563;
-}
-
-/* Modal del plano: clic = zoom */
-.contenido-modal {
-    cursor: zoom-in;
-}
-
-.contenido-modal.ampliado {
-    max-width: none;
-    max-height: none;
-    width: 200%;
-    cursor: zoom-out;
-}
-
-button.cerrar-modal {
-    background: none;
-    border: 0;
-    line-height: 1;
-}
-
-.btn-piso:focus-visible,
-.boton-accion:focus-visible,
-.cerrar-modal:focus-visible {
-    outline: 3px solid #93c5fd;
-    outline-offset: 2px;
-}
-
-/*------------------------------------------------------------------------------------------*/
-/* Quiz */
+/* Opciones del quiz */
 .opciones-container {
     min-width: 0;
 }
@@ -1689,21 +1446,7 @@ button.cerrar-modal {
     border-color: #93c5fd;
 }
 
-.opcion-quiz:disabled {
-    cursor: default;
-}
-
-.opcion-quiz:focus-visible {
-    outline: 3px solid #93c5fd;
-    outline-offset: 2px;
-}
-
-/*------------------------------------------------------------------------------------------*/
-/* Sección de Videos y Multimedia */
-.seccion-videos {
-    margin-top: 50px;
-}
-
+/* Videos explicativos */
 .grid-videos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
@@ -1719,12 +1462,6 @@ button.cerrar-modal {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.tarjeta-video:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
 .contenedor-iframe {
@@ -1751,36 +1488,7 @@ button.cerrar-modal {
     flex-grow: 1;
 }
 
-.info-video h3 {
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: #0f172a;
-    margin-bottom: 8px;
-}
-
-.info-video p {
-    font-size: 0.82rem;
-    color: #64748b;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    flex-grow: 1;
-}
-
-.etiqueta-video {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #2563eb;
-    background-color: #eff6ff;
-    padding: 4px 10px;
-    border-radius: 20px;
-    width: fit-content;
-}
-
-/*------------------------------------------------------------------------------------------*/
-/* Esquemas y Guías Gráficas Ilustradas */
+/* Infografia de pasos (agachate, cubrete, sujetate) */
 .contenedor-infografia-pasos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
@@ -1797,7 +1505,6 @@ button.cerrar-modal {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .caja-ilustracion {
@@ -1834,66 +1541,85 @@ button.cerrar-modal {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
 }
 
-.titulo-paso-grafico {
-    font-size: 1.1rem;
-    font-weight: 800;
+/* --- Estilo de los iconoes de botiquin o linterna--- */
+.grid-mochila {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 16px;
+}
+
+.item-mochila {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.item-mochila i {
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 10px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.item-mochila strong {
+    display: block;
+    font-size: 0.85rem;
     color: #0f172a;
-    margin-bottom: 8px;
 }
 
-.texto-paso-grafico {
-    font-size: 0.82rem;
+.item-mochila span {
+    font-size: 0.75rem;
     color: #64748b;
-    line-height: 1.5;
 }
 
-/*------------------------------------------------------------------------------------------*/
-*, *::before, *::after {
-    box-sizing: border-box;
+/* Formulario de reporte de riesgos */
+.seccion-reporte-riesgo {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    padding: 30px;
 }
- 
-img, iframe, video {
-    max-width: 100%;
+
+.form-grid-reporte {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 16px;
+    margin-top: 20px;
 }
- 
-.titulo-principal {
-    font-size: clamp(1.6rem, 5vw, 2.6rem);
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
- 
-/*Adaptacion a diferentes tamaños de pantalla*/
- 
-/* Pantallas medianas */
-@media (max-width: 1024px) {
-    .contenedor-portada {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
- 
-    .contenido-portada {
-        max-width: 100%;
-    }
- 
-    .contenido-portada > p {
-        margin-left: auto;
-        margin-right: auto;
-    }
- 
-    .botones {
-        justify-content: center;
-    }
- 
-    .tarjeta-institucional {
-        width: 100%;
-        max-width: 420px;
-    }
+
+.campo-form label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #334155;
 }
- 
-/* Tablets en vertical y celulares en horizontal */
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    background: #ffffff;
+}
+
+/* Adaptacion a tablets y celulares */
 @media (max-width: 850px) {
+    
     .barra-navegacion {
         flex-direction: column;
         justify-content: center;
@@ -1901,224 +1627,90 @@ img, iframe, video {
         padding: 16px 4%;
         gap: 15px;
     }
- 
+
     .barra-navegacion nav ul {
         justify-content: center;
         gap: 6px;
     }
- 
-    .barra-navegacion nav a {
-        padding: 12px 14px;
-        font-size: 12px;
-    }
- 
+
+    
     .grid-plano-contenido,
-    .layout-visor-pure-css,
-    .layout-visor-normativo {
+    .layout-visor-pure-css {
         grid-template-columns: 1fr;
     }
- 
-    .encabezado-emergencia {
-        flex-direction: column;
-        align-items: flex-start;
-    }
- 
+
+    
     .grilla-pie {
         grid-template-columns: 1fr;
         gap: 30px;
     }
- 
-    .botones {
-        flex-wrap: wrap;
-        width: 100%;
-    }
- 
-    .seccion-sismo {
-        padding: 50px 16px;
-    }
 }
- 
-/* Celulares */
-@media (max-width: 576px) {
-    .barra-superior {
-        font-size: 11px;
-        padding: 8px 12px;
+
+
+/* Ajustes de adaptacion adicionales */
+.botones {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 850px) {
+    /* Portada con menos espacio */
+    .portada {
+        padding: 60px 5% 50px;
+    }
+
+    /* Portada en una columna */
+    .contenedor-portada {
+        flex-direction: column;
+        gap: 40px;
         text-align: center;
+    }
+
+    .contenido-portada > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .botones {
         justify-content: center;
     }
- 
-    .barra-navegacion {
-        border-radius: 0 0 14px 14px;
-        padding: 12px 10px;
-    }
- 
-    .logotipo img {
-        width: 45px;
-        height: 45px;
-    }
- 
-    .logotipo strong {
-        font-size: 17px;
-    }
- 
-    .logotipo small {
-        font-size: 11px;
-    }
- 
-    .barra-navegacion nav {
-        width: 100%;
-        overflow-x: auto;
-        padding-bottom: 4px;
-    }
- 
-    .barra-navegacion nav ul {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-    }
- 
-    .barra-navegacion nav a {
-        white-space: nowrap;
-        flex-shrink: 0;
-    }
- 
-    .portada {
-        padding: 40px 16px;
-        margin-top: 0;
-        min-height: auto;
-    }
- 
-    .insignia {
-        font-size: 11px;
-        padding: 6px 12px;
-        margin-bottom: 16px;
-    }
- 
-    .contenido-portada h1 {
-        font-size: clamp(1.5rem, 7vw, 1.9rem);
-        margin-bottom: 16px;
-    }
- 
-    .contenido-portada > p {
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 24px;
-    }
- 
-    .botones {
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-    }
- 
-    .botones a {
-        width: 100%;
-        padding: 14px 16px;
-        font-size: 12px;
-    }
- 
+
+    /* Tarjeta institucional al ancho disponible */
     .tarjeta-institucional {
-        max-width: 100%;
+        width: 100%;
+        max-width: 400px;
     }
- 
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    /* Botones a todo el ancho */
+    .botones a {
+        min-width: 100%;
+    }
+
     .logo-tarjeta {
         height: 200px;
         padding: 20px;
     }
- 
-    .info-sistema {
-        padding: 18px 20px;
+
+    .mapa-gps {
+        height: 300px;
     }
- 
-    .tarjeta-modulo,
+
     .tarjeta {
-        padding: 20px 18px;
+        padding: 24px 20px;
         min-height: auto;
     }
-    
-    .contenedor-visor-plano,
-    .banner-investigacion,
-    .visor-normativo-container {
-        padding: 18px 14px;
-        border-radius: 16px;
-        margin-bottom: 25px;
+
+    .seccion-reporte-riesgo {
+        padding: 20px;
     }
- 
-    .banner-investigacion {
-        padding: 24px 16px;
+
+    .logotipo strong {
+        font-size: 18px;
     }
- 
-    .caja-ilustracion {
-        height: 150px;
-    }
- 
-    .grid-videos {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
- 
-    .grid-videos iframe,
-    .grid-videos video {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-    }
- 
-    .info-video {
-        padding: 16px;
-    }
- 
-    .piso-botones {
-        width: 100%;
-        flex-direction: column;
-    }
- 
-    .btn-piso {
-        width: 100%;
-        text-align: center;
-        padding: 12px;
-    }
- 
-    .barra-derechos {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
- 
-    .enlaces-legales {
-        flex-direction: column;
-        gap: 8px;
-    }
- 
-    .contenido-modal {
-        max-width: 96%;
-    }
- 
-    .cerrar-modal {
-        right: 15px;
-        top: 15px;
-        font-size: 32px;
-    }
- 
-    .mapa-gps {
-        height: 280px;
-    }
- 
-    .mapa-gps iframe {
-        width: 100%;
-        height: 100%;
-    }
- 
-    .titulo-investigacion {
-        font-size: 1.35rem;
-    }
- 
-    .acciones-investigacion {
-        flex-direction: column;
-        align-items: stretch;
-    }
- 
-    .boton-encuesta-destacado {
-        width: 100%;
-        justify-content: center;
+
+    .barra-navegacion nav a {
+        padding: 9px 12px;
     }
 }
